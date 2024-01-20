@@ -128,6 +128,15 @@ loadstring(game:HttpGet('https://pastebin.com/raw/BsJ4xfXu'))()
     print('Script Loaded')
 end)
 
+-- Exclusives tab number 4 some scripts aswell, every tabs has 7 scripts except NectoVerse Made ones
+local tab = DrRayLibrary.newTab("ExclusiveS 4", "ImageIdHere")
+
+tab.newButton("Vector Hub", "Vector Hub[Blox fruits]", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tuxoz/VectorHub/main/MBPC"))()
+    print('Script Loaded')
+end)
+
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
