@@ -1,5 +1,5 @@
 -- Made By KHANTELL on roblox, Creation TEAM NectoVerse
--- Launcher Link: loadstring(game:HttpGet(('https://github.com/Cortzalno666/Nectoverse-Launcher/blob/master/NectoLauncher.lua'),true))()
+-- Launcher Link: loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
 
 -- V0.0.1
 -- NectoLauncher Status: Online
