@@ -151,6 +151,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Scri
     print('Script Loaded')
 end)
 
+tab.newButton("2024 Gui", "Idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dakiiuem/DakiiV2/main/MainV2", true))()
+    print('Script Loaded')
+end)
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
