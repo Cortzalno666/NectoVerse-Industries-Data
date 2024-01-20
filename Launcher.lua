@@ -1,7 +1,7 @@
 -- Instances:
 
-local EzLauncher = {
-	EzLauncher = Instance.new("ScreenGui"),
+local NectoLauncher = {
+	NectoLauncher = Instance.new("ScreenGui"),
 	Frame = Instance.new("Frame"),
 	StatusSection = Instance.new("Frame"),
 	SectionTopBar = Instance.new("Folder"),
@@ -17,7 +17,7 @@ local EzLauncher = {
 	EzAPIStatusFrame = Instance.new("Frame"),
 	Status_2 = Instance.new("TextLabel"),
 	StatusName_2 = Instance.new("TextLabel"),
-	EzLauncherStatusFrame = Instance.new("Frame"),
+	NectoLauncherStatusFrame = Instance.new("Frame"),
 	Status_3 = Instance.new("TextLabel"),
 	StatusName_3 = Instance.new("TextLabel"),
 	UIListLayout = Instance.new("UIListLayout"),
@@ -57,387 +57,387 @@ local EzLauncher = {
 
 --Properties:
 
-EzLauncher.EzLauncher.Name = "EzLauncher"
-EzLauncher.EzLauncher.Parent = game.CoreGui
-EzLauncher.EzLauncher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NectoLauncher.NectoLauncher.Name = "NectoLauncher"
+NectoLauncher.NectoLauncher.Parent = game.CoreGui
+NectoLauncher.NectoLauncher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-EzLauncher.Frame.Parent = EzLauncher.EzLauncher
-EzLauncher.Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.Frame.BackgroundColor3 = Color3.fromRGB(41, 53, 68)
-EzLauncher.Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
-EzLauncher.Frame.Size = UDim2.new(0, 350, 0, 400)
+NectoLauncher.Frame.Parent = NectoLauncher.NectoLauncher
+NectoLauncher.Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.Frame.BackgroundColor3 = Color3.fromRGB(41, 53, 68)
+NectoLauncher.Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+NectoLauncher.Frame.Size = UDim2.new(0, 350, 0, 400)
 
-EzLauncher.StatusSection.Name = "StatusSection"
-EzLauncher.StatusSection.Parent = EzLauncher.Frame
-EzLauncher.StatusSection.AnchorPoint = Vector2.new(0.5, 0)
-EzLauncher.StatusSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
-EzLauncher.StatusSection.BorderSizePixel = 0
-EzLauncher.StatusSection.Size = UDim2.new(1, -20, 0, 100)
+NectoLauncher.StatusSection.Name = "StatusSection"
+NectoLauncher.StatusSection.Parent = NectoLauncher.Frame
+NectoLauncher.StatusSection.AnchorPoint = Vector2.new(0.5, 0)
+NectoLauncher.StatusSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
+NectoLauncher.StatusSection.BorderSizePixel = 0
+NectoLauncher.StatusSection.Size = UDim2.new(1, -20, 0, 100)
 
-EzLauncher.SectionTopBar.Name = "SectionTopBar"
-EzLauncher.SectionTopBar.Parent = EzLauncher.StatusSection
+NectoLauncher.SectionTopBar.Name = "SectionTopBar"
+NectoLauncher.SectionTopBar.Parent = NectoLauncher.StatusSection
 
-EzLauncher.Frame_2.Parent = EzLauncher.SectionTopBar
-EzLauncher.Frame_2.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
-EzLauncher.Frame_2.Size = UDim2.new(0, 2, 0, 32)
+NectoLauncher.Frame_2.Parent = NectoLauncher.SectionTopBar
+NectoLauncher.Frame_2.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+NectoLauncher.Frame_2.Size = UDim2.new(0, 2, 0, 32)
 
-EzLauncher.UICorner.Parent = EzLauncher.Frame_2
+NectoLauncher.UICorner.Parent = NectoLauncher.Frame_2
 
-EzLauncher.Frame_3.Parent = EzLauncher.SectionTopBar
-EzLauncher.Frame_3.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
-EzLauncher.Frame_3.BackgroundTransparency = 0.750
-EzLauncher.Frame_3.BorderSizePixel = 0
-EzLauncher.Frame_3.Position = UDim2.new(0, 0, 0, 32)
-EzLauncher.Frame_3.Size = UDim2.new(1, 0, 0, 1)
+NectoLauncher.Frame_3.Parent = NectoLauncher.SectionTopBar
+NectoLauncher.Frame_3.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
+NectoLauncher.Frame_3.BackgroundTransparency = 0.750
+NectoLauncher.Frame_3.BorderSizePixel = 0
+NectoLauncher.Frame_3.Position = UDim2.new(0, 0, 0, 32)
+NectoLauncher.Frame_3.Size = UDim2.new(1, 0, 0, 1)
 
-EzLauncher.TextLabel.Parent = EzLauncher.SectionTopBar
-EzLauncher.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.TextLabel.BackgroundTransparency = 1.000
-EzLauncher.TextLabel.Position = UDim2.new(0, 12, 0, 4)
-EzLauncher.TextLabel.Size = UDim2.new(0, 299, 0, 24)
-EzLauncher.TextLabel.Font = Enum.Font.SourceSans
-EzLauncher.TextLabel.Text = "Server Status"
-EzLauncher.TextLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.TextLabel.TextSize = 14.000
-EzLauncher.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+NectoLauncher.TextLabel.Parent = NectoLauncher.SectionTopBar
+NectoLauncher.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.TextLabel.BackgroundTransparency = 1.000
+NectoLauncher.TextLabel.Position = UDim2.new(0, 12, 0, 4)
+NectoLauncher.TextLabel.Size = UDim2.new(0, 299, 0, 24)
+NectoLauncher.TextLabel.Font = Enum.Font.SourceSans
+NectoLauncher.TextLabel.Text = "Server Status"
+NectoLauncher.TextLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.TextLabel.TextSize = 14.000
+NectoLauncher.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-EzLauncher.UICorner_2.CornerRadius = UDim.new(0, 4)
-EzLauncher.UICorner_2.Parent = EzLauncher.StatusSection
+NectoLauncher.UICorner_2.CornerRadius = UDim.new(0, 4)
+NectoLauncher.UICorner_2.Parent = NectoLauncher.StatusSection
 
-EzLauncher.ContentFrame.Name = "ContentFrame"
-EzLauncher.ContentFrame.Parent = EzLauncher.StatusSection
-EzLauncher.ContentFrame.AnchorPoint = Vector2.new(0.5, 1)
-EzLauncher.ContentFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.ContentFrame.BackgroundTransparency = 1.000
-EzLauncher.ContentFrame.Position = UDim2.new(0.5, 0, 1, -2)
-EzLauncher.ContentFrame.Size = UDim2.new(1, -20, 0, 60)
+NectoLauncher.ContentFrame.Name = "ContentFrame"
+NectoLauncher.ContentFrame.Parent = NectoLauncher.StatusSection
+NectoLauncher.ContentFrame.AnchorPoint = Vector2.new(0.5, 1)
+NectoLauncher.ContentFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.ContentFrame.BackgroundTransparency = 1.000
+NectoLauncher.ContentFrame.Position = UDim2.new(0.5, 0, 1, -2)
+NectoLauncher.ContentFrame.Size = UDim2.new(1, -20, 0, 60)
 
-EzLauncher.EzHubStatusFrame.Name = "EzHubStatusFrame"
-EzLauncher.EzHubStatusFrame.Parent = EzLauncher.ContentFrame
-EzLauncher.EzHubStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.EzHubStatusFrame.BackgroundTransparency = 1.000
-EzLauncher.EzHubStatusFrame.LayoutOrder = 2
-EzLauncher.EzHubStatusFrame.Position = UDim2.new(0, 10, 0, 38)
-EzLauncher.EzHubStatusFrame.Size = UDim2.new(0, 60, 0, 60)
+NectoLauncher.EzHubStatusFrame.Name = "EzHubStatusFrame"
+NectoLauncher.EzHubStatusFrame.Parent = NectoLauncher.ContentFrame
+NectoLauncher.EzHubStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.EzHubStatusFrame.BackgroundTransparency = 1.000
+NectoLauncher.EzHubStatusFrame.LayoutOrder = 2
+NectoLauncher.EzHubStatusFrame.Position = UDim2.new(0, 10, 0, 38)
+NectoLauncher.EzHubStatusFrame.Size = UDim2.new(0, 60, 0, 60)
 
-EzLauncher.Status.Name = "Status"
-EzLauncher.Status.Parent = EzLauncher.EzHubStatusFrame
-EzLauncher.Status.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.Status.BackgroundTransparency = 1.000
-EzLauncher.Status.Position = UDim2.new(0.5, 0, 0.5, 12)
-EzLauncher.Status.Size = UDim2.new(0, 50, 0, 30)
-EzLauncher.Status.Font = Enum.Font.SourceSans
-EzLauncher.Status.Text = "Online"
-EzLauncher.Status.TextColor3 = Color3.fromRGB(45, 192, 179)
-EzLauncher.Status.TextSize = 20.000
+NectoLauncher.Status.Name = "Status"
+NectoLauncher.Status.Parent = NectoLauncher.EzHubStatusFrame
+NectoLauncher.Status.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.Status.BackgroundTransparency = 1.000
+NectoLauncher.Status.Position = UDim2.new(0.5, 0, 0.5, 12)
+NectoLauncher.Status.Size = UDim2.new(0, 50, 0, 30)
+NectoLauncher.Status.Font = Enum.Font.SourceSans
+NectoLauncher.Status.Text = "Online"
+NectoLauncher.Status.TextColor3 = Color3.fromRGB(45, 192, 179)
+NectoLauncher.Status.TextSize = 20.000
 
-EzLauncher.StatusName.Name = "StatusName"
-EzLauncher.StatusName.Parent = EzLauncher.EzHubStatusFrame
-EzLauncher.StatusName.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.StatusName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.StatusName.BackgroundTransparency = 1.000
-EzLauncher.StatusName.Position = UDim2.new(0.5, 0, 0.5, -12)
-EzLauncher.StatusName.Size = UDim2.new(0, 50, 0, 30)
-EzLauncher.StatusName.Font = Enum.Font.SourceSans
-EzLauncher.StatusName.Text = "Ez Hub"
-EzLauncher.StatusName.TextColor3 = Color3.fromRGB(92, 106, 124)
-EzLauncher.StatusName.TextSize = 14.000
+NectoLauncher.StatusName.Name = "StatusName"
+NectoLauncher.StatusName.Parent = NectoLauncher.EzHubStatusFrame
+NectoLauncher.StatusName.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.StatusName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.StatusName.BackgroundTransparency = 1.000
+NectoLauncher.StatusName.Position = UDim2.new(0.5, 0, 0.5, -12)
+NectoLauncher.StatusName.Size = UDim2.new(0, 50, 0, 30)
+NectoLauncher.StatusName.Font = Enum.Font.SourceSans
+NectoLauncher.StatusName.Text = "Ez Hub"
+NectoLauncher.StatusName.TextColor3 = Color3.fromRGB(92, 106, 124)
+NectoLauncher.StatusName.TextSize = 14.000
 
-EzLauncher.EzAPIStatusFrame.Name = "EzAPIStatusFrame"
-EzLauncher.EzAPIStatusFrame.Parent = EzLauncher.ContentFrame
-EzLauncher.EzAPIStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.EzAPIStatusFrame.BackgroundTransparency = 1.000
-EzLauncher.EzAPIStatusFrame.LayoutOrder = 3
-EzLauncher.EzAPIStatusFrame.Position = UDim2.new(0, 80, 0, 38)
-EzLauncher.EzAPIStatusFrame.Size = UDim2.new(0, 60, 0, 60)
+NectoLauncher.EzAPIStatusFrame.Name = "EzAPIStatusFrame"
+NectoLauncher.EzAPIStatusFrame.Parent = NectoLauncher.ContentFrame
+NectoLauncher.EzAPIStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.EzAPIStatusFrame.BackgroundTransparency = 1.000
+NectoLauncher.EzAPIStatusFrame.LayoutOrder = 3
+NectoLauncher.EzAPIStatusFrame.Position = UDim2.new(0, 80, 0, 38)
+NectoLauncher.EzAPIStatusFrame.Size = UDim2.new(0, 60, 0, 60)
 
-EzLauncher.Status_2.Name = "Status"
-EzLauncher.Status_2.Parent = EzLauncher.EzAPIStatusFrame
-EzLauncher.Status_2.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.Status_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.Status_2.BackgroundTransparency = 1.000
-EzLauncher.Status_2.Position = UDim2.new(0.5, 0, 0.5, 12)
-EzLauncher.Status_2.Size = UDim2.new(0, 50, 0, 30)
-EzLauncher.Status_2.Font = Enum.Font.SourceSans
-EzLauncher.Status_2.Text = "Online"
-EzLauncher.Status_2.TextColor3 = Color3.fromRGB(45, 192, 179)
-EzLauncher.Status_2.TextSize = 20.000
+NectoLauncher.Status_2.Name = "Status"
+NectoLauncher.Status_2.Parent = NectoLauncher.EzAPIStatusFrame
+NectoLauncher.Status_2.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.Status_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.Status_2.BackgroundTransparency = 1.000
+NectoLauncher.Status_2.Position = UDim2.new(0.5, 0, 0.5, 12)
+NectoLauncher.Status_2.Size = UDim2.new(0, 50, 0, 30)
+NectoLauncher.Status_2.Font = Enum.Font.SourceSans
+NectoLauncher.Status_2.Text = "Online"
+NectoLauncher.Status_2.TextColor3 = Color3.fromRGB(45, 192, 179)
+NectoLauncher.Status_2.TextSize = 20.000
 
-EzLauncher.StatusName_2.Name = "StatusName"
-EzLauncher.StatusName_2.Parent = EzLauncher.EzAPIStatusFrame
-EzLauncher.StatusName_2.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.StatusName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.StatusName_2.BackgroundTransparency = 1.000
-EzLauncher.StatusName_2.Position = UDim2.new(0.5, 0, 0.5, -12)
-EzLauncher.StatusName_2.Size = UDim2.new(0, 50, 0, 30)
-EzLauncher.StatusName_2.Font = Enum.Font.SourceSans
-EzLauncher.StatusName_2.Text = "Ez API"
-EzLauncher.StatusName_2.TextColor3 = Color3.fromRGB(92, 106, 124)
-EzLauncher.StatusName_2.TextSize = 14.000
+NectoLauncher.StatusName_2.Name = "StatusName"
+NectoLauncher.StatusName_2.Parent = NectoLauncher.EzAPIStatusFrame
+NectoLauncher.StatusName_2.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.StatusName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.StatusName_2.BackgroundTransparency = 1.000
+NectoLauncher.StatusName_2.Position = UDim2.new(0.5, 0, 0.5, -12)
+NectoLauncher.StatusName_2.Size = UDim2.new(0, 50, 0, 30)
+NectoLauncher.StatusName_2.Font = Enum.Font.SourceSans
+NectoLauncher.StatusName_2.Text = "Ez API"
+NectoLauncher.StatusName_2.TextColor3 = Color3.fromRGB(92, 106, 124)
+NectoLauncher.StatusName_2.TextSize = 14.000
 
-EzLauncher.EzLauncherStatusFrame.Name = "EzLauncherStatusFrame"
-EzLauncher.EzLauncherStatusFrame.Parent = EzLauncher.ContentFrame
-EzLauncher.EzLauncherStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.EzLauncherStatusFrame.BackgroundTransparency = 1.000
-EzLauncher.EzLauncherStatusFrame.LayoutOrder = 1
-EzLauncher.EzLauncherStatusFrame.Position = UDim2.new(0, 150, 0, 38)
-EzLauncher.EzLauncherStatusFrame.Size = UDim2.new(0, 60, 0, 60)
+NectoLauncher.NectoLauncherStatusFrame.Name = "NectoLauncherStatusFrame"
+NectoLauncher.NectoLauncherStatusFrame.Parent = NectoLauncher.ContentFrame
+NectoLauncher.NectoLauncherStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.NectoLauncherStatusFrame.BackgroundTransparency = 1.000
+NectoLauncher.NectoLauncherStatusFrame.LayoutOrder = 1
+NectoLauncher.NectoLauncherStatusFrame.Position = UDim2.new(0, 150, 0, 38)
+NectoLauncher.NectoLauncherStatusFrame.Size = UDim2.new(0, 60, 0, 60)
 
-EzLauncher.Status_3.Name = "Status"
-EzLauncher.Status_3.Parent = EzLauncher.EzLauncherStatusFrame
-EzLauncher.Status_3.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.Status_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.Status_3.BackgroundTransparency = 1.000
-EzLauncher.Status_3.Position = UDim2.new(0.5, 0, 0.5, 12)
-EzLauncher.Status_3.Size = UDim2.new(0, 50, 0, 30)
-EzLauncher.Status_3.Font = Enum.Font.SourceSans
-EzLauncher.Status_3.Text = "Online"
-EzLauncher.Status_3.TextColor3 = Color3.fromRGB(45, 192, 179)
-EzLauncher.Status_3.TextSize = 20.000
+NectoLauncher.Status_3.Name = "Status"
+NectoLauncher.Status_3.Parent = NectoLauncher.NectoLauncherStatusFrame
+NectoLauncher.Status_3.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.Status_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.Status_3.BackgroundTransparency = 1.000
+NectoLauncher.Status_3.Position = UDim2.new(0.5, 0, 0.5, 12)
+NectoLauncher.Status_3.Size = UDim2.new(0, 50, 0, 30)
+NectoLauncher.Status_3.Font = Enum.Font.SourceSans
+NectoLauncher.Status_3.Text = "Online"
+NectoLauncher.Status_3.TextColor3 = Color3.fromRGB(45, 192, 179)
+NectoLauncher.Status_3.TextSize = 20.000
 
-EzLauncher.StatusName_3.Name = "StatusName"
-EzLauncher.StatusName_3.Parent = EzLauncher.EzLauncherStatusFrame
-EzLauncher.StatusName_3.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.StatusName_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.StatusName_3.BackgroundTransparency = 1.000
-EzLauncher.StatusName_3.Position = UDim2.new(0.5, 0, 0.5, -12)
-EzLauncher.StatusName_3.Size = UDim2.new(0, 50, 0, 30)
-EzLauncher.StatusName_3.Font = Enum.Font.SourceSans
-EzLauncher.StatusName_3.Text = "Ez Launcher"
-EzLauncher.StatusName_3.TextColor3 = Color3.fromRGB(92, 106, 124)
-EzLauncher.StatusName_3.TextSize = 14.000
+NectoLauncher.StatusName_3.Name = "StatusName"
+NectoLauncher.StatusName_3.Parent = NectoLauncher.NectoLauncherStatusFrame
+NectoLauncher.StatusName_3.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.StatusName_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.StatusName_3.BackgroundTransparency = 1.000
+NectoLauncher.StatusName_3.Position = UDim2.new(0.5, 0, 0.5, -12)
+NectoLauncher.StatusName_3.Size = UDim2.new(0, 50, 0, 30)
+NectoLauncher.StatusName_3.Font = Enum.Font.SourceSans
+NectoLauncher.StatusName_3.Text = "Ez Launcher"
+NectoLauncher.StatusName_3.TextColor3 = Color3.fromRGB(92, 106, 124)
+NectoLauncher.StatusName_3.TextSize = 14.000
 
-EzLauncher.UIListLayout.Parent = EzLauncher.ContentFrame
-EzLauncher.UIListLayout.FillDirection = Enum.FillDirection.Horizontal
-EzLauncher.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-EzLauncher.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-EzLauncher.UIListLayout.Padding = UDim.new(0, 25)
+NectoLauncher.UIListLayout.Parent = NectoLauncher.ContentFrame
+NectoLauncher.UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+NectoLauncher.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+NectoLauncher.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+NectoLauncher.UIListLayout.Padding = UDim.new(0, 25)
 
-EzLauncher.UICorner_3.CornerRadius = UDim.new(0, 4)
-EzLauncher.UICorner_3.Parent = EzLauncher.Frame
+NectoLauncher.UICorner_3.CornerRadius = UDim.new(0, 4)
+NectoLauncher.UICorner_3.Parent = NectoLauncher.Frame
 
-EzLauncher.UIListLayout_2.Parent = EzLauncher.Frame
-EzLauncher.UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-EzLauncher.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-EzLauncher.UIListLayout_2.Padding = UDim.new(0, 5)
+NectoLauncher.UIListLayout_2.Parent = NectoLauncher.Frame
+NectoLauncher.UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+NectoLauncher.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+NectoLauncher.UIListLayout_2.Padding = UDim.new(0, 5)
 
-EzLauncher.UIPadding.Parent = EzLauncher.Frame
-EzLauncher.UIPadding.PaddingBottom = UDim.new(0, 10)
-EzLauncher.UIPadding.PaddingTop = UDim.new(0, 10)
+NectoLauncher.UIPadding.Parent = NectoLauncher.Frame
+NectoLauncher.UIPadding.PaddingBottom = UDim.new(0, 10)
+NectoLauncher.UIPadding.PaddingTop = UDim.new(0, 10)
 
-EzLauncher.NewsSection.Name = "NewsSection"
-EzLauncher.NewsSection.Parent = EzLauncher.Frame
-EzLauncher.NewsSection.AnchorPoint = Vector2.new(0.5, 0)
-EzLauncher.NewsSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
-EzLauncher.NewsSection.BorderSizePixel = 0
-EzLauncher.NewsSection.Size = UDim2.new(1, -20, 0, 150)
+NectoLauncher.NewsSection.Name = "NewsSection"
+NectoLauncher.NewsSection.Parent = NectoLauncher.Frame
+NectoLauncher.NewsSection.AnchorPoint = Vector2.new(0.5, 0)
+NectoLauncher.NewsSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
+NectoLauncher.NewsSection.BorderSizePixel = 0
+NectoLauncher.NewsSection.Size = UDim2.new(1, -20, 0, 150)
 
-EzLauncher.SectionTopBar_2.Name = "SectionTopBar"
-EzLauncher.SectionTopBar_2.Parent = EzLauncher.NewsSection
+NectoLauncher.SectionTopBar_2.Name = "SectionTopBar"
+NectoLauncher.SectionTopBar_2.Parent = NectoLauncher.NewsSection
 
-EzLauncher.Frame_4.Parent = EzLauncher.SectionTopBar_2
-EzLauncher.Frame_4.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
-EzLauncher.Frame_4.Size = UDim2.new(0, 2, 0, 32)
+NectoLauncher.Frame_4.Parent = NectoLauncher.SectionTopBar_2
+NectoLauncher.Frame_4.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+NectoLauncher.Frame_4.Size = UDim2.new(0, 2, 0, 32)
 
-EzLauncher.UICorner_4.Parent = EzLauncher.Frame_4
+NectoLauncher.UICorner_4.Parent = NectoLauncher.Frame_4
 
-EzLauncher.Frame_5.Parent = EzLauncher.SectionTopBar_2
-EzLauncher.Frame_5.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
-EzLauncher.Frame_5.BackgroundTransparency = 0.750
-EzLauncher.Frame_5.BorderSizePixel = 0
-EzLauncher.Frame_5.Position = UDim2.new(0, 0, 0, 32)
-EzLauncher.Frame_5.Size = UDim2.new(1, 0, 0, 1)
+NectoLauncher.Frame_5.Parent = NectoLauncher.SectionTopBar_2
+NectoLauncher.Frame_5.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
+NectoLauncher.Frame_5.BackgroundTransparency = 0.750
+NectoLauncher.Frame_5.BorderSizePixel = 0
+NectoLauncher.Frame_5.Position = UDim2.new(0, 0, 0, 32)
+NectoLauncher.Frame_5.Size = UDim2.new(1, 0, 0, 1)
 
-EzLauncher.TextLabel_2.Parent = EzLauncher.SectionTopBar_2
-EzLauncher.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.TextLabel_2.BackgroundTransparency = 1.000
-EzLauncher.TextLabel_2.Position = UDim2.new(0, 12, 0, 4)
-EzLauncher.TextLabel_2.Size = UDim2.new(0, 299, 0, 24)
-EzLauncher.TextLabel_2.Font = Enum.Font.SourceSans
-EzLauncher.TextLabel_2.Text = "News"
-EzLauncher.TextLabel_2.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.TextLabel_2.TextSize = 14.000
-EzLauncher.TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+NectoLauncher.TextLabel_2.Parent = NectoLauncher.SectionTopBar_2
+NectoLauncher.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.TextLabel_2.BackgroundTransparency = 1.000
+NectoLauncher.TextLabel_2.Position = UDim2.new(0, 12, 0, 4)
+NectoLauncher.TextLabel_2.Size = UDim2.new(0, 299, 0, 24)
+NectoLauncher.TextLabel_2.Font = Enum.Font.SourceSans
+NectoLauncher.TextLabel_2.Text = "News"
+NectoLauncher.TextLabel_2.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.TextLabel_2.TextSize = 14.000
+NectoLauncher.TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
 
-EzLauncher.UICorner_5.CornerRadius = UDim.new(0, 4)
-EzLauncher.UICorner_5.Parent = EzLauncher.NewsSection
+NectoLauncher.UICorner_5.CornerRadius = UDim.new(0, 4)
+NectoLauncher.UICorner_5.Parent = NectoLauncher.NewsSection
 
-EzLauncher.ContentFrame_2.Name = "ContentFrame"
-EzLauncher.ContentFrame_2.Parent = EzLauncher.NewsSection
-EzLauncher.ContentFrame_2.Active = true
-EzLauncher.ContentFrame_2.AnchorPoint = Vector2.new(0.5, 1)
-EzLauncher.ContentFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.ContentFrame_2.BackgroundTransparency = 1.000
-EzLauncher.ContentFrame_2.BorderSizePixel = 0
-EzLauncher.ContentFrame_2.Position = UDim2.new(0.5, 0, 1, -8)
-EzLauncher.ContentFrame_2.Size = UDim2.new(1, -20, 0, 100)
-EzLauncher.ContentFrame_2.CanvasSize = UDim2.new(0, 0, 0, 0)
-EzLauncher.ContentFrame_2.ScrollBarThickness = 4
+NectoLauncher.ContentFrame_2.Name = "ContentFrame"
+NectoLauncher.ContentFrame_2.Parent = NectoLauncher.NewsSection
+NectoLauncher.ContentFrame_2.Active = true
+NectoLauncher.ContentFrame_2.AnchorPoint = Vector2.new(0.5, 1)
+NectoLauncher.ContentFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.ContentFrame_2.BackgroundTransparency = 1.000
+NectoLauncher.ContentFrame_2.BorderSizePixel = 0
+NectoLauncher.ContentFrame_2.Position = UDim2.new(0.5, 0, 1, -8)
+NectoLauncher.ContentFrame_2.Size = UDim2.new(1, -20, 0, 100)
+NectoLauncher.ContentFrame_2.CanvasSize = UDim2.new(0, 0, 0, 0)
+NectoLauncher.ContentFrame_2.ScrollBarThickness = 4
 
-EzLauncher.UIListLayout_3.Parent = EzLauncher.ContentFrame_2
-EzLauncher.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
-EzLauncher.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
-EzLauncher.UIListLayout_3.Padding = UDim.new(0, 5)
+NectoLauncher.UIListLayout_3.Parent = NectoLauncher.ContentFrame_2
+NectoLauncher.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+NectoLauncher.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+NectoLauncher.UIListLayout_3.Padding = UDim.new(0, 5)
 
-EzLauncher.LaunchSection.Name = "LaunchSection"
-EzLauncher.LaunchSection.Parent = EzLauncher.Frame
-EzLauncher.LaunchSection.AnchorPoint = Vector2.new(0.5, 0)
-EzLauncher.LaunchSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
-EzLauncher.LaunchSection.BorderSizePixel = 0
-EzLauncher.LaunchSection.Size = UDim2.new(1, -20, 0, 120)
+NectoLauncher.LaunchSection.Name = "LaunchSection"
+NectoLauncher.LaunchSection.Parent = NectoLauncher.Frame
+NectoLauncher.LaunchSection.AnchorPoint = Vector2.new(0.5, 0)
+NectoLauncher.LaunchSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
+NectoLauncher.LaunchSection.BorderSizePixel = 0
+NectoLauncher.LaunchSection.Size = UDim2.new(1, -20, 0, 120)
 
-EzLauncher.SectionTopBar_3.Name = "SectionTopBar"
-EzLauncher.SectionTopBar_3.Parent = EzLauncher.LaunchSection
+NectoLauncher.SectionTopBar_3.Name = "SectionTopBar"
+NectoLauncher.SectionTopBar_3.Parent = NectoLauncher.LaunchSection
 
-EzLauncher.Frame_6.Parent = EzLauncher.SectionTopBar_3
-EzLauncher.Frame_6.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
-EzLauncher.Frame_6.Size = UDim2.new(0, 2, 0, 32)
+NectoLauncher.Frame_6.Parent = NectoLauncher.SectionTopBar_3
+NectoLauncher.Frame_6.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+NectoLauncher.Frame_6.Size = UDim2.new(0, 2, 0, 32)
 
-EzLauncher.UICorner_6.Parent = EzLauncher.Frame_6
+NectoLauncher.UICorner_6.Parent = NectoLauncher.Frame_6
 
-EzLauncher.Frame_7.Parent = EzLauncher.SectionTopBar_3
-EzLauncher.Frame_7.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
-EzLauncher.Frame_7.BackgroundTransparency = 0.750
-EzLauncher.Frame_7.BorderSizePixel = 0
-EzLauncher.Frame_7.Position = UDim2.new(0, 0, 0, 32)
-EzLauncher.Frame_7.Size = UDim2.new(1, 0, 0, 1)
+NectoLauncher.Frame_7.Parent = NectoLauncher.SectionTopBar_3
+NectoLauncher.Frame_7.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
+NectoLauncher.Frame_7.BackgroundTransparency = 0.750
+NectoLauncher.Frame_7.BorderSizePixel = 0
+NectoLauncher.Frame_7.Position = UDim2.new(0, 0, 0, 32)
+NectoLauncher.Frame_7.Size = UDim2.new(1, 0, 0, 1)
 
-EzLauncher.TextLabel_3.Parent = EzLauncher.SectionTopBar_3
-EzLauncher.TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.TextLabel_3.BackgroundTransparency = 1.000
-EzLauncher.TextLabel_3.Position = UDim2.new(0, 12, 0, 4)
-EzLauncher.TextLabel_3.Size = UDim2.new(0, 299, 0, 24)
-EzLauncher.TextLabel_3.Font = Enum.Font.SourceSans
-EzLauncher.TextLabel_3.Text = "Launcher / Other"
-EzLauncher.TextLabel_3.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.TextLabel_3.TextSize = 14.000
-EzLauncher.TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+NectoLauncher.TextLabel_3.Parent = NectoLauncher.SectionTopBar_3
+NectoLauncher.TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.TextLabel_3.BackgroundTransparency = 1.000
+NectoLauncher.TextLabel_3.Position = UDim2.new(0, 12, 0, 4)
+NectoLauncher.TextLabel_3.Size = UDim2.new(0, 299, 0, 24)
+NectoLauncher.TextLabel_3.Font = Enum.Font.SourceSans
+NectoLauncher.TextLabel_3.Text = "Launcher / Other"
+NectoLauncher.TextLabel_3.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.TextLabel_3.TextSize = 14.000
+NectoLauncher.TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
 
-EzLauncher.UICorner_7.CornerRadius = UDim.new(0, 4)
-EzLauncher.UICorner_7.Parent = EzLauncher.LaunchSection
+NectoLauncher.UICorner_7.CornerRadius = UDim.new(0, 4)
+NectoLauncher.UICorner_7.Parent = NectoLauncher.LaunchSection
 
-EzLauncher.ContentFrame_3.Name = "ContentFrame"
-EzLauncher.ContentFrame_3.Parent = EzLauncher.LaunchSection
-EzLauncher.ContentFrame_3.AnchorPoint = Vector2.new(0.5, 1)
-EzLauncher.ContentFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.ContentFrame_3.BackgroundTransparency = 1.000
-EzLauncher.ContentFrame_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
-EzLauncher.ContentFrame_3.Position = UDim2.new(0.5, 0, 1, -8)
-EzLauncher.ContentFrame_3.Size = UDim2.new(1, -20, 0, 70)
+NectoLauncher.ContentFrame_3.Name = "ContentFrame"
+NectoLauncher.ContentFrame_3.Parent = NectoLauncher.LaunchSection
+NectoLauncher.ContentFrame_3.AnchorPoint = Vector2.new(0.5, 1)
+NectoLauncher.ContentFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.ContentFrame_3.BackgroundTransparency = 1.000
+NectoLauncher.ContentFrame_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+NectoLauncher.ContentFrame_3.Position = UDim2.new(0.5, 0, 1, -8)
+NectoLauncher.ContentFrame_3.Size = UDim2.new(1, -20, 0, 70)
 
-EzLauncher.ThemeSelectionFrame.Name = "ThemeSelectionFrame"
-EzLauncher.ThemeSelectionFrame.Parent = EzLauncher.ContentFrame_3
-EzLauncher.ThemeSelectionFrame.AnchorPoint = Vector2.new(0, 1)
-EzLauncher.ThemeSelectionFrame.BackgroundColor3 = Color3.fromRGB(41, 84, 178)
-EzLauncher.ThemeSelectionFrame.Position = UDim2.new(0, 0, 1, -4)
-EzLauncher.ThemeSelectionFrame.Size = UDim2.new(0, 150, 0, 30)
+NectoLauncher.ThemeSelectionFrame.Name = "ThemeSelectionFrame"
+NectoLauncher.ThemeSelectionFrame.Parent = NectoLauncher.ContentFrame_3
+NectoLauncher.ThemeSelectionFrame.AnchorPoint = Vector2.new(0, 1)
+NectoLauncher.ThemeSelectionFrame.BackgroundColor3 = Color3.fromRGB(41, 84, 178)
+NectoLauncher.ThemeSelectionFrame.Position = UDim2.new(0, 0, 1, -4)
+NectoLauncher.ThemeSelectionFrame.Size = UDim2.new(0, 150, 0, 30)
 
-EzLauncher.UICorner_8.CornerRadius = UDim.new(0, 4)
-EzLauncher.UICorner_8.Parent = EzLauncher.ThemeSelectionFrame
+NectoLauncher.UICorner_8.CornerRadius = UDim.new(0, 4)
+NectoLauncher.UICorner_8.Parent = NectoLauncher.ThemeSelectionFrame
 
-EzLauncher.SelectionLeft.Name = "SelectionLeft"
-EzLauncher.SelectionLeft.Parent = EzLauncher.ThemeSelectionFrame
-EzLauncher.SelectionLeft.AnchorPoint = Vector2.new(0, 0.5)
-EzLauncher.SelectionLeft.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.SelectionLeft.BackgroundTransparency = 1.000
-EzLauncher.SelectionLeft.Position = UDim2.new(0, 5, 0.5, 0)
-EzLauncher.SelectionLeft.Size = UDim2.new(0, 20, 0, 20)
-EzLauncher.SelectionLeft.Font = Enum.Font.SourceSans
-EzLauncher.SelectionLeft.Text = "<"
-EzLauncher.SelectionLeft.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.SelectionLeft.TextSize = 14.000
+NectoLauncher.SelectionLeft.Name = "SelectionLeft"
+NectoLauncher.SelectionLeft.Parent = NectoLauncher.ThemeSelectionFrame
+NectoLauncher.SelectionLeft.AnchorPoint = Vector2.new(0, 0.5)
+NectoLauncher.SelectionLeft.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.SelectionLeft.BackgroundTransparency = 1.000
+NectoLauncher.SelectionLeft.Position = UDim2.new(0, 5, 0.5, 0)
+NectoLauncher.SelectionLeft.Size = UDim2.new(0, 20, 0, 20)
+NectoLauncher.SelectionLeft.Font = Enum.Font.SourceSans
+NectoLauncher.SelectionLeft.Text = "<"
+NectoLauncher.SelectionLeft.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.SelectionLeft.TextSize = 14.000
 
-EzLauncher.SelectionRight.Name = "SelectionRight"
-EzLauncher.SelectionRight.Parent = EzLauncher.ThemeSelectionFrame
-EzLauncher.SelectionRight.AnchorPoint = Vector2.new(1, 0.5)
-EzLauncher.SelectionRight.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.SelectionRight.BackgroundTransparency = 1.000
-EzLauncher.SelectionRight.Position = UDim2.new(1, -5, 0.5, 0)
-EzLauncher.SelectionRight.Size = UDim2.new(0, 20, 0, 20)
-EzLauncher.SelectionRight.Font = Enum.Font.SourceSans
-EzLauncher.SelectionRight.Text = ">"
-EzLauncher.SelectionRight.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.SelectionRight.TextSize = 14.000
+NectoLauncher.SelectionRight.Name = "SelectionRight"
+NectoLauncher.SelectionRight.Parent = NectoLauncher.ThemeSelectionFrame
+NectoLauncher.SelectionRight.AnchorPoint = Vector2.new(1, 0.5)
+NectoLauncher.SelectionRight.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.SelectionRight.BackgroundTransparency = 1.000
+NectoLauncher.SelectionRight.Position = UDim2.new(1, -5, 0.5, 0)
+NectoLauncher.SelectionRight.Size = UDim2.new(0, 20, 0, 20)
+NectoLauncher.SelectionRight.Font = Enum.Font.SourceSans
+NectoLauncher.SelectionRight.Text = ">"
+NectoLauncher.SelectionRight.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.SelectionRight.TextSize = 14.000
 
-EzLauncher.SelectedLabel.Name = "SelectedLabel"
-EzLauncher.SelectedLabel.Parent = EzLauncher.ThemeSelectionFrame
-EzLauncher.SelectedLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-EzLauncher.SelectedLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-EzLauncher.SelectedLabel.BackgroundTransparency = 1.000
-EzLauncher.SelectedLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
-EzLauncher.SelectedLabel.Size = UDim2.new(1, -54, 1, -2)
-EzLauncher.SelectedLabel.Font = Enum.Font.SourceSans
-EzLauncher.SelectedLabel.Text = "Default Theme"
-EzLauncher.SelectedLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.SelectedLabel.TextSize = 14.000
+NectoLauncher.SelectedLabel.Name = "SelectedLabel"
+NectoLauncher.SelectedLabel.Parent = NectoLauncher.ThemeSelectionFrame
+NectoLauncher.SelectedLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+NectoLauncher.SelectedLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NectoLauncher.SelectedLabel.BackgroundTransparency = 1.000
+NectoLauncher.SelectedLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+NectoLauncher.SelectedLabel.Size = UDim2.new(1, -54, 1, -2)
+NectoLauncher.SelectedLabel.Font = Enum.Font.SourceSans
+NectoLauncher.SelectedLabel.Text = "Default Theme"
+NectoLauncher.SelectedLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.SelectedLabel.TextSize = 14.000
 
-EzLauncher.Launch.Name = "Launch"
-EzLauncher.Launch.Parent = EzLauncher.ContentFrame_3
-EzLauncher.Launch.BackgroundColor3 = Color3.fromRGB(41, 84, 178)
-EzLauncher.Launch.Size = UDim2.new(0, 150, 0, 30)
-EzLauncher.Launch.Font = Enum.Font.SourceSans
-EzLauncher.Launch.Text = "Launch"
-EzLauncher.Launch.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.Launch.TextSize = 14.000
+NectoLauncher.Launch.Name = "Launch"
+NectoLauncher.Launch.Parent = NectoLauncher.ContentFrame_3
+NectoLauncher.Launch.BackgroundColor3 = Color3.fromRGB(41, 84, 178)
+NectoLauncher.Launch.Size = UDim2.new(0, 150, 0, 30)
+NectoLauncher.Launch.Font = Enum.Font.SourceSans
+NectoLauncher.Launch.Text = "Launch"
+NectoLauncher.Launch.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.Launch.TextSize = 14.000
 
-EzLauncher.UICorner_9.CornerRadius = UDim.new(0, 4)
-EzLauncher.UICorner_9.Parent = EzLauncher.Launch
+NectoLauncher.UICorner_9.CornerRadius = UDim.new(0, 4)
+NectoLauncher.UICorner_9.Parent = NectoLauncher.Launch
 
-EzLauncher.Containers.Name = "Containers"
-EzLauncher.Containers.Parent = EzLauncher.EzLauncher
+NectoLauncher.Containers.Name = "Containers"
+NectoLauncher.Containers.Parent = NectoLauncher.NectoLauncher
 
-EzLauncher.NewsDivider.Name = "NewsDivider"
-EzLauncher.NewsDivider.Parent = EzLauncher.Containers
-EzLauncher.NewsDivider.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
-EzLauncher.NewsDivider.LayoutOrder = 1
-EzLauncher.NewsDivider.Size = UDim2.new(1, -10, 0, 3)
-EzLauncher.NewsDivider.Visible = false
+NectoLauncher.NewsDivider.Name = "NewsDivider"
+NectoLauncher.NewsDivider.Parent = NectoLauncher.Containers
+NectoLauncher.NewsDivider.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+NectoLauncher.NewsDivider.LayoutOrder = 1
+NectoLauncher.NewsDivider.Size = UDim2.new(1, -10, 0, 3)
+NectoLauncher.NewsDivider.Visible = false
 
-EzLauncher.UICorner_10.Parent = EzLauncher.NewsDivider
+NectoLauncher.UICorner_10.Parent = NectoLauncher.NewsDivider
 
-EzLauncher.NewsLabel.Name = "NewsLabel"
-EzLauncher.NewsLabel.Parent = EzLauncher.Containers
-EzLauncher.NewsLabel.BackgroundColor3 = Color3.fromRGB(28, 41, 56)
-EzLauncher.NewsLabel.BackgroundTransparency = 1.000
-EzLauncher.NewsLabel.Size = UDim2.new(1, -8, 0, 30)
-EzLauncher.NewsLabel.Visible = false
-EzLauncher.NewsLabel.Font = Enum.Font.SourceSans
-EzLauncher.NewsLabel.Text = ""
-EzLauncher.NewsLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
-EzLauncher.NewsLabel.TextSize = 14.000
-EzLauncher.NewsLabel.TextWrapped = true
-EzLauncher.NewsLabel.TextXAlignment = Enum.TextXAlignment.Left
+NectoLauncher.NewsLabel.Name = "NewsLabel"
+NectoLauncher.NewsLabel.Parent = NectoLauncher.Containers
+NectoLauncher.NewsLabel.BackgroundColor3 = Color3.fromRGB(28, 41, 56)
+NectoLauncher.NewsLabel.BackgroundTransparency = 1.000
+NectoLauncher.NewsLabel.Size = UDim2.new(1, -8, 0, 30)
+NectoLauncher.NewsLabel.Visible = false
+NectoLauncher.NewsLabel.Font = Enum.Font.SourceSans
+NectoLauncher.NewsLabel.Text = ""
+NectoLauncher.NewsLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
+NectoLauncher.NewsLabel.TextSize = 14.000
+NectoLauncher.NewsLabel.TextWrapped = true
+NectoLauncher.NewsLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-EzLauncher.UIPadding_2.Parent = EzLauncher.NewsLabel
-EzLauncher.UIPadding_2.PaddingBottom = UDim.new(0, 5)
-EzLauncher.UIPadding_2.PaddingLeft = UDim.new(0, 5)
-EzLauncher.UIPadding_2.PaddingRight = UDim.new(0, 5)
-EzLauncher.UIPadding_2.PaddingTop = UDim.new(0, 5)
+NectoLauncher.UIPadding_2.Parent = NectoLauncher.NewsLabel
+NectoLauncher.UIPadding_2.PaddingBottom = UDim.new(0, 5)
+NectoLauncher.UIPadding_2.PaddingLeft = UDim.new(0, 5)
+NectoLauncher.UIPadding_2.PaddingRight = UDim.new(0, 5)
+NectoLauncher.UIPadding_2.PaddingTop = UDim.new(0, 5)
 
 --------------------------------------------------------------------
 -- Gui to lua manual properties
 
-EzLauncher.Containers.NewsLabel.AutomaticSize = Enum.AutomaticSize.Y;
-EzLauncher.NewsSection.ContentFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y;
-EzLauncher.NewsSection.ContentFrame.ScrollBarImageColor3 = Color3.fromRGB(112, 112, 112);
+NectoLauncher.Containers.NewsLabel.AutomaticSize = Enum.AutomaticSize.Y;
+NectoLauncher.NewsSection.ContentFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y;
+NectoLauncher.NewsSection.ContentFrame.ScrollBarImageColor3 = Color3.fromRGB(112, 112, 112);
 
 --------------------------------------------------------------------
 -- Get launcher data
 
-EzLauncher.EzLauncher.Enabled = false;
+NectoLauncher.NectoLauncher.Enabled = false;
 
 local launcherData = game:GetService("HttpService"):JSONDecode(
 	(game:HttpGet("https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/LauncherData.json")));
 
-EzLauncher.EzLauncher.Enabled = true;
+NectoLauncher.NectoLauncher.Enabled = true;
 
 --------------------------------------------------------------------
 -- Startup animation
 
 -- Essentially changes the visibillity of the descendants of the main frame of the launcher
 local function changeElementState(state)
-	for i,v in pairs(EzLauncher.EzLauncher.Frame:GetDescendants()) do
+	for i,v in pairs(NectoLauncher.NectoLauncher.Frame:GetDescendants()) do
 		if v:IsA("GuiObject") then
 			v.Visible = state;
 		end
@@ -446,10 +446,10 @@ end
 
 changeElementState(false);
 
-local oldSize = EzLauncher.EzLauncher.Frame.Size;
-EzLauncher.EzLauncher.Frame.Size = UDim2.new(0,0,0,0);
+local oldSize = NectoLauncher.NectoLauncher.Frame.Size;
+NectoLauncher.NectoLauncher.Frame.Size = UDim2.new(0,0,0,0);
 
-EzLauncher.EzLauncher.Frame:TweenSize(oldSize, Enum.EasingDirection.Out,
+NectoLauncher.NectoLauncher.Frame:TweenSize(oldSize, Enum.EasingDirection.Out,
 	Enum.EasingStyle.Quad, 0.3);
 
 wait(0.35);
@@ -473,15 +473,15 @@ for i,v in pairs(newsData) do
 	local newsText = v[2];
 
 	if newsText == "@DIVIDER" then
-		local div = EzLauncher.NewsDivider:Clone();
+		local div = NectoLauncher.NewsDivider:Clone();
 		div.LayoutOrder = newsOrder;
-		div.Parent = EzLauncher.NewsSection.ContentFrame;
+		div.Parent = NectoLauncher.NewsSection.ContentFrame;
 		div.Visible = true;
 	else
-		local container = EzLauncher.NewsLabel:Clone();
+		local container = NectoLauncher.NewsLabel:Clone();
 		container.Text = newsText;
 		container.LayoutOrder = newsOrder;
-		container.Parent = EzLauncher.NewsSection.ContentFrame;
+		container.Parent = NectoLauncher.NewsSection.ContentFrame;
 		container.Visible = true;
 	end
 
@@ -490,18 +490,18 @@ end
 --------------------------------------------------------------------
 -- Apply the launcher data: Status
 
-EzLauncher.EzHubStatusFrame.Status.Text = statusData["EzHub"];
-EzLauncher.EzAPIStatusFrame.Status.Text = statusData["EzAPI"];
-EzLauncher.EzLauncherStatusFrame.Status.Text = statusData["EzLauncher"];
+NectoLauncher.EzHubStatusFrame.Status.Text = statusData["EzHub"];
+NectoLauncher.EzAPIStatusFrame.Status.Text = statusData["EzAPI"];
+NectoLauncher.NectoLauncherStatusFrame.Status.Text = statusData["NectoLauncher"];
 
-if EzLauncher.EzHubStatusFrame.Status.Text == "Offline" then
-	EzLauncher.EzHubStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
+if NectoLauncher.EzHubStatusFrame.Status.Text == "Offline" then
+	NectoLauncher.EzHubStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
 end
-if EzLauncher.EzAPIStatusFrame.Status.Text == "Offline" then
-	EzLauncher.EzAPIStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
+if NectoLauncher.EzAPIStatusFrame.Status.Text == "Offline" then
+	NectoLauncher.EzAPIStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
 end
-if EzLauncher.EzLauncherStatusFrame.Status.Text == "Offline" then
-	EzLauncher.EzLauncherStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
+if NectoLauncher.NectoLauncherStatusFrame.Status.Text == "Offline" then
+	NectoLauncher.NectoLauncherStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
 end
 
 --------------------------------------------------------------------
@@ -525,10 +525,10 @@ end
 
 local function updateSelectedTheme()
 	selectedTheme = getThemeWithThemeIndex(currentThemeIndex);
-	EzLauncher.SelectedLabel.Text = selectedTheme;
+	NectoLauncher.SelectedLabel.Text = selectedTheme;
 end
 
-EzLauncher.SelectionRight.MouseButton1Click:Connect(function()
+NectoLauncher.SelectionRight.MouseButton1Click:Connect(function()
 	if currentThemeIndex == highestThemeIndex then
 		currentThemeIndex = 1;
 	else
@@ -537,7 +537,7 @@ EzLauncher.SelectionRight.MouseButton1Click:Connect(function()
 	updateSelectedTheme();
 end)
 
-EzLauncher.SelectionLeft.MouseButton1Click:Connect(function()
+NectoLauncher.SelectionLeft.MouseButton1Click:Connect(function()
 	if currentThemeIndex == 1 then
 		currentThemeIndex = highestThemeIndex;
 	else
@@ -567,21 +567,21 @@ local allowedOverrideUsers = {
 	1606794809
 }
 
-EzLauncher.Launch.MouseButton1Click:Connect(function()
+NectoLauncher.Launch.MouseButton1Click:Connect(function()
 	
 	-- Check if services are down
-	if not table.find(allowedOverrideUsers, game.Players.LocalPlayer.UserId) and (EzLauncher.EzHubStatusFrame.Status.Text == "Offline" or
-	EzLauncher.EzAPIStatusFrame.Status.Text == "Offline" or
-	EzLauncher.EzLauncherStatusFrame.Status.Text == "Offline") then
+	if not table.find(allowedOverrideUsers, game.Players.LocalPlayer.UserId) and (NectoLauncher.EzHubStatusFrame.Status.Text == "Offline" or
+	NectoLauncher.EzAPIStatusFrame.Status.Text == "Offline" or
+	NectoLauncher.NectoLauncherStatusFrame.Status.Text == "Offline") then
 		spawn(function()
-			EzLauncher.Launch.Text = "Service Offline";
+			NectoLauncher.Launch.Text = "Service Offline";
 			wait(3);
-			EzLauncher.Launch.Text = "Launch";
+			NectoLauncher.Launch.Text = "Launch";
 		end)
 		return;
 	end
 
-	EzLauncher.Launch.Text = "Launching...";
+	NectoLauncher.Launch.Text = "Launching...";
 
 	-- Apply the theme before launching Ez Hub
 	_G.EzHubTheme = themes[selectedTheme];
@@ -589,9 +589,9 @@ EzLauncher.Launch.MouseButton1Click:Connect(function()
 
 	changeElementState(false)
 
-	EzLauncher.EzLauncher.Frame:TweenSize(UDim2.new(0,0,0,0), Enum.EasingDirection.Out,
+	NectoLauncher.NectoLauncher.Frame:TweenSize(UDim2.new(0,0,0,0), Enum.EasingDirection.Out,
 		Enum.EasingStyle.Quad, 0.5, false, function()
-			EzLauncher.EzLauncher:Destroy();
+			NectoLauncher.NectoLauncher:Destroy();
 		end);
 
 end)
@@ -639,4 +639,4 @@ local function dragify(MainFrame)
 	end)
 end
 
-dragify(EzLauncher.EzLauncher.Frame);
+dragify(NectoLauncher.NectoLauncher.Frame);
