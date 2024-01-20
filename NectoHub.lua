@@ -136,6 +136,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tuxoz/VectorHub/main/
     print('Script Loaded')
 end)
 
+tab.newButton("GangTeng hub", "Best keyless bloxfruits script", function()
+loadstring(game:HttpGet("https://isnahamzahpastebin.tech/v1/gantenghubv1_026"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Blox Fruits Auto farm", "Auto farm race v4/mirage", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chibacomebackbeta.txt'))()
+    print('Script Loaded')
+end)
 
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
