@@ -156,6 +156,29 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/dakiiuem/DakiiV2/main
     print('Script Loaded')
 end)
 
+tab.newButton("Adel Hub", "Blox fruits script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub/main/Main.lua"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("ThunderZ Hub", "Aimbot script Blox fruits", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-HUB/HUB/main/Aimbot"))()
+    print('Script Loaded')
+end)
+
+-- Exclusives tab number 5 some scripts aswell, every tabs has 7 scripts except NectoVerse Made ones
+local tab = DrRayLibrary.newTab("ExclusiveS 5", "ImageIdHere")
+
+tab.newButton("Banana Hub", "Key is key itself", function()
+loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/main.lua"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Auto Cdk", "Auto cdk farm", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+    print('Script Loaded')
+end)
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
