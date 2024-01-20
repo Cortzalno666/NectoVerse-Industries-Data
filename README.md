@@ -1,3 +1,3 @@
 # Ez-Industries-Launcher
 
-Launcher for products of Ez Industries.
+Launcher for products of NectoVerse
