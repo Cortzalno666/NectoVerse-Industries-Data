@@ -146,6 +146,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHubcom
     print('Script Loaded')
 end)
 
+tab.newButton("MinhTriet Hub", "Idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/MTriet-Hub.lua"))()
+    print('Script Loaded')
+end)
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
