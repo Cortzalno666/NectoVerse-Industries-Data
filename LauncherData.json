@@ -6,9 +6,9 @@
         [4, "11/04/2022: As you may have realised, Ez Hub has been \"discontinued\" in a sense that no new content will be added, however a small update fixing several minor issues has been released."]
     ],
     "StatusData": {
-        "EzHub": "Online",
-        "EzAPI": "Online",
-        "EzLauncher": "Online"
+        "NectoHub": "Online",
+        "NectoAPI": "Online",
+        "NectoLauncher": "Online"
     },
     "LatestVersion": "https://raw.githubusercontent.com/debug420/Ez-Hub/master/EzHub.lua",
     "Themes": {
