@@ -19,7 +19,7 @@ tab.newInput("Fun Feature", "This is just for fun, nothing interesting. ", funct
 end)
 -- Launching button
 tab.newButton("Launch NectoHub", "NectoHub Launcher V0.0.1", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/Nectoverse-Launcher/master/NectoHub.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoHub.lua'))()
       print('NectoHub V0.0.1 Launched')
 end)
 
