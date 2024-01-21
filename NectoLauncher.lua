@@ -13,6 +13,12 @@ local window = DrRayLibrary:Load("NectoLauncher V0.0.1", "Default")
 -- Tab Creation
 local tab = DrRayLibrary.newTab("Launcher", "ImageIdHere")
 tab.newLabel("Credits to NectoVerse: https://discord.gg/aPevmdnnge")
+-- Netless
+tab.newLabel("User Netless because some scripts might be unusable. ")
+tab.newButton("Launch Netless", "Launch it", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/Cu7bKQWN'),true))()
+      print('Netless Launched')
+end)
 -- Input For fun
 tab.newInput("Fun Feature", "This is just for fun, nothing interesting. ", function(text)
     print("Entered text: " .. text)
