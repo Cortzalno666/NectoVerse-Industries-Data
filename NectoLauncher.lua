@@ -1,5 +1,9 @@
 -- Made By KHANTELL on roblox, Creation TEAM NectoVerse
 -- Launcher Link: loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
+-- The Creator username is KHANTELL in roblox
+-- The creator username is deleted_tensei_lawden in discord
+
+-- GOING TO BE RELEASED ON SCRIPTBLOX!
 
 -- V0.0.1
 -- NectoLauncher Status: Online
