@@ -34,6 +34,9 @@ tab.newLabel("Nectolauncher: Online")
 tab.newLabel("NectoAPI: Online")
 tab.newLabel("NectoHub: Online")
 
+local tab = DrRayLibrary.newTab("Warning!", "ImageIdHere")
+tab.newLabel("We find safe and working scripts for everyone, Some may not work for some reason if they're server are down. if they dont work for some reason please dont blame us but you can contact our DC Server from Launcher tab.")
+
 window:Open()
 window:Close()
 window:Hide()
