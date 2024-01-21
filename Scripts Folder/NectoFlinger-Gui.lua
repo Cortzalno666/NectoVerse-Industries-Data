@@ -66,11 +66,11 @@ Top.Name = "Top"
 Top.Parent = Main
 Top.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
 Top.BorderSizePixel = 0
-Top.Size = UDim2.new(0, 454, 0, 44)
+Top.Size = UDim2.new(0, 479, 0, 44)
 -- Title setup
 Title.Name = "Title"
 Title.Parent = Top
-Title.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Title.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
 Title.BorderSizePixel = 0
 Title.Position = UDim2.new(0, 0, 0.295454562, 0)
 Title.Size = UDim2.new(0, 454, 0, 30)
