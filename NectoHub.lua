@@ -173,6 +173,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub
     print('Script Loaded')
 end)
 
+-- NectoVerse Creations
+local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
