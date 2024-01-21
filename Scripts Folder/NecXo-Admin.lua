@@ -1,13 +1,4 @@
---[[
-╭━╮╱╭╮╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╭╮            |
-┃┃╰╮┃┃╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱┃┃            |
-┃╭╮╰╯┣━━┳╮╭┳━━┫┃╭━━┳━━┳━━╮┃┃╱┃┣━╯┣╮╭┳┳━╮     | Welcome to the Nameless Admin source, feel free to take a look around.
-┃┃╰╮┃┃╭╮┃╰╯┃┃━┫┃┃┃━┫━━┫━━┫┃╰━╯┃╭╮┃╰╯┣┫╭╮╮    | Enjoy.
-┃┃╱┃┃┃╭╮┃┃┃┃┃━┫╰┫┃━╋━━┣━━┃┃╭━╮┃╰╯┃┃┃┃┃┃┃┃    |
-╰╯╱╰━┻╯╰┻┻┻┻━━┻━┻━━┻━━┻━━╯╰╯╱╰┻━━┻┻┻┻┻╯╰╯    |
---]]
-
- -- Waits until game is loaded
+-- Wait's Till game is fully or halfway on load.
  local game = game
  local GetService = game.GetService
  if (not game.IsLoaded(game)) then
@@ -21,7 +12,7 @@
  local Notify = Notification.Notify;
 
  Notify({
-		 Description = "Happy New Years!";
+		 Description = "Newest One dropped!";
 		 Title = "NA";
 		 Duration = 5;
 		 
@@ -33,23 +24,23 @@
  
  -- Creates folder & files for Prefix & Plugins
  if FileSupport then
- if not isfolder('Nameless-Admin') then
- makefolder('Nameless-Admin')
+ if not isfolder('NecXo-Admin') then
+ makefolder('NecXo-Admin')
  end
  
- if not isfolder('Nameless-Admin/Plugins') then
-	 makefolder('Nameless-Admin/Plugins')
+ if not isfolder('NecXo-Admin/Plugins') then
+	 makefolder('NecXo-Admin/Plugins')
  end
  
- if not isfile("Nameless-Admin/Prefix.txt") then
- writefile("Nameless-Admin/Prefix.txt", ';')
+ if not isfile("NecXo-Admin/Prefix.txt") then
+ writefile("NNecXo-Admin/Prefix.txt", '?')
  else
  end
  end
  
  -- [[ PREFIX AND OTHER STUFF. ]] -- 
  local opt = {
-	 prefix = readfile("Nameless-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
+	 prefix = readfile("NecXo-Admin/Prefix.txt", '?'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
 	 tupleSeparator = ',',	-- ;ff me,others,all | ;ff me/others/all
 	 ui = {					-- never did anything with this
 		 
@@ -60,7 +51,7 @@
  }
  
  -- [[ Version ]] -- 
- currentversion = 1.13
+ currentversion = 0.1
  
  --[[ VARIABLES ]]--
  PlaceId, JobId = game.PlaceId, game.JobId
@@ -10010,7 +10001,7 @@ end
 	end
  end
  
- if not Welcome then Message("Script by AnthonyIsntHere", "Enjoy!", 5) end
+ if not Welcome then Message("Script by deleted_tensei_lawden", "Enjoy!", 5) end
  getgenv().Welcome = true
  if Targets[1] then for _,x in next, Targets do GetPlayer(x) end else return end
  
@@ -10063,7 +10054,7 @@ end
  
  Notify({
  Description = "Free gamepass has been executed, keep in mind this wont always work.";
- Title = "Nameless Admin";
+ Title = "NecXo Admin";
  Duration = 5;
  
  });
