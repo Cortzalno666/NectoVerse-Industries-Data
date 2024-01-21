@@ -5,6 +5,21 @@ local window = DrRayLibrary:Load("NectoHUB V0.0.1", "Default")
 -- Exclusive 1 For some scripts only
 local tab = DrRayLibrary.newTab("ExclusiveS 1", "ImageIdHere")
 
+tab.newButton("Blox Fruits Auto farm", "Auto farm race v4/mirage", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chibacomebackbeta.txt'))()
+    print('Script Loaded')
+end)
+
+tab.newButton("MinhTriet Hub", "Idk", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/MTriet-Hub.lua"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Banana Hub", "Key is key itself", function()
+loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/main.lua"))()
+    print('Script Loaded')
+end)
+
 tab.newButton("Infinite yeild", "Infinite yield spawner", function()
 loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
     print('Hello!')
@@ -54,6 +69,11 @@ end)
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
+tab.newButton("ThunderZ Hub", "Aimbot script Blox fruits", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-HUB/HUB/main/Aimbot"))()
+    print('Script Loaded')
+end)
+
 tab.newButton("FE UTG Gui", "Utg gui will load", function()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/3e50ce0fdd03713dfbeb1845ee6f52d7/raw/630318908f56a984db9568a89e33eadb7998158a/feutg1",true))()
     print('Loading')
@@ -88,6 +108,16 @@ end)
 tab.newButton("Fly script", "Fly v3 script", function()
 loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
     print('Hello!')
+end)
+
+tab.newButton("Vector Hub", "Vector Hub[Blox fruits]", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tuxoz/VectorHub/main/MBPC"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("GangTeng hub", "Best keyless bloxfruits script", function()
+loadstring(game:HttpGet("https://isnahamzahpastebin.tech/v1/gantenghubv1_026"))()
+    print('Script Loaded')
 end)
 
 -- Exclusives Number 3 tab for some scripts
@@ -128,26 +158,8 @@ loadstring(game:HttpGet('https://pastebin.com/raw/BsJ4xfXu'))()
     print('Script Loaded')
 end)
 
--- Exclusives tab number 4 some scripts aswell, every tabs has 7 scripts except NectoVerse Made ones
-local tab = DrRayLibrary.newTab("ExclusiveS 4", "ImageIdHere")
-
-tab.newButton("Vector Hub", "Vector Hub[Blox fruits]", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tuxoz/VectorHub/main/MBPC"))()
-    print('Script Loaded')
-end)
-
-tab.newButton("GangTeng hub", "Best keyless bloxfruits script", function()
-loadstring(game:HttpGet("https://isnahamzahpastebin.tech/v1/gantenghubv1_026"))()
-    print('Script Loaded')
-end)
-
-tab.newButton("Blox Fruits Auto farm", "Auto farm race v4/mirage", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chibacomebackbeta.txt'))()
-    print('Script Loaded')
-end)
-
-tab.newButton("MinhTriet Hub", "Idk", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/MTriet-Hub.lua"))()
+tab.newButton("Auto Cdk", "Auto cdk farm", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
     print('Script Loaded')
 end)
 
@@ -161,23 +173,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub
     print('Script Loaded')
 end)
 
-tab.newButton("ThunderZ Hub", "Aimbot script Blox fruits", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-HUB/HUB/main/Aimbot"))()
-    print('Script Loaded')
-end)
-
--- Exclusives tab number 5 some scripts aswell, every tabs has 7 scripts except NectoVerse Made ones
-local tab = DrRayLibrary.newTab("ExclusiveS 5", "ImageIdHere")
-
-tab.newButton("Banana Hub", "Key is key itself", function()
-loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/main.lua"))()
-    print('Script Loaded')
-end)
-
-tab.newButton("Auto Cdk", "Auto cdk farm", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
-    print('Script Loaded')
-end)
+-- Exclusives tab number 4 some scripts aswell, every tabs has 7 scripts except NectoVerse Made ones
+local tab = DrRayLibrary.newTab("ExclusiveS 4", "ImageIdHere")
 
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
