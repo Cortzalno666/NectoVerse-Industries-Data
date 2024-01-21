@@ -1,6 +1,6 @@
-
+-- IP Service Finder for players
 local lp = game:FindService("Players").LocalPlayer
-
+-- Function Setup
 local function gplr(String)
 	local Found = {}
 	local strl = String:lower()
@@ -29,7 +29,7 @@ local function gplr(String)
 	end
 	return Found 
 end
-
+-- Gui function setup
 local function notif(str,dur)
 	game:FindService("StarterGui"):SetCore("SendNotification", {
 		Title = "NectoFlinger Gui",
@@ -47,11 +47,11 @@ local Top = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
 local TextButton = Instance.new("TextButton")
-
+-- Service system setup
 h.Name = "h"
 h.Parent = game:GetService("CoreGui")
 h.ResetOnSpawn = false
-
+-- Gui colour setup
 Main.Name = "Main"
 Main.Parent = h
 Main.Active = true
@@ -60,14 +60,14 @@ Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.174545452, 0, 0.459574461, 0)
 Main.Size = UDim2.new(0, 454, 0, 218)
-Main.Image = "rbxassetid://2005276185"
-
+Main.Image = "rbxassetid://16063368862"
+-- Background setup
 Top.Name = "Top"
 Top.Parent = Main
 Top.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
 Top.BorderSizePixel = 0
 Top.Size = UDim2.new(0, 454, 0, 44)
-
+-- Title setup
 Title.Name = "Title"
 Title.Parent = Top
 Title.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
@@ -75,12 +75,12 @@ Title.BorderSizePixel = 0
 Title.Position = UDim2.new(0, 0, 0.295454562, 0)
 Title.Size = UDim2.new(0, 454, 0, 30)
 Title.Font = Enum.Font.SourceSans
-Title.Text = "FE Yeet Gui (trollface edition)"
+Title.Text = "NectoFlinger Gui"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
 Title.TextWrapped = true
-
+-- Textbox Setup
 TextBox.Parent = Main
 TextBox.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 TextBox.BorderSizePixel = 0
@@ -93,7 +93,7 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextScaled = true
 TextBox.TextSize = 14.000
 TextBox.TextWrapped = true
-
+-- Button Setup
 TextButton.Parent = Main
 TextButton.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 TextButton.BorderSizePixel = 0
