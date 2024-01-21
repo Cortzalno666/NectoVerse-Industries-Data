@@ -173,9 +173,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub
     print('Script Loaded')
 end)
 
--- Exclusives tab number 4 some scripts aswell, every tabs has 7 scripts except NectoVerse Made ones
-local tab = DrRayLibrary.newTab("ExclusiveS 4", "ImageIdHere")
-
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
