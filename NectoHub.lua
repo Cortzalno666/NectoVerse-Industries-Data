@@ -176,6 +176,16 @@ end)
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
+tab.newButton("NectoFlinger GUI", "A Official product by NectoVerse Team.", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/NectoFlinger-Gui.lua'),true))() 
+    print('Script Loaded')
+end)
+
+tab.newButton("NecXo Admin", "Just nameless admin but modified and owned/recreated by NectoVerse.", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/NecXo-Admin.txt'),true))() 
+    print('Script Loaded')
+end)
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
