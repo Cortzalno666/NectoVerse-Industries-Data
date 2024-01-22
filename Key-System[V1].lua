@@ -12,7 +12,7 @@ _G.Key = "06bca580d1fda7ac25089552f93f47dc" -- You Put Your Key Here
 _G.KeyInput = "string"
 
 function MakeScriptHub()
-loadstring(game:HttpGet((""), true))() -- You Put Your Script Here
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))(), -- script here
 
 end
 
