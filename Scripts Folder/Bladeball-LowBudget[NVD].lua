@@ -7,15 +7,15 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/vFis
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "Bladeball Lowbudget"
    },
-   KeySystem = nil, -- Set this to true to use our key system
+   KeySystem = true, -- turned
    KeySettings = {
-      Title = "key",
-      Subtitle = "Key System",
-      Note = "Dm me.",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      Title = "Fuck You if you skid",
+      Subtitle = "Skidder? nuh uh",
+      Note = "Nuh uh",
+      FileName = "No2024only28373", -- nuh uh
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Torso100,W"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"No2024only2030,"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
  
