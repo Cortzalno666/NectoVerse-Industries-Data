@@ -1,3 +1,4 @@
+-- Made by deleted_tensei_lawden
 -- IP Service Finder for players
 local lp = game:FindService("Players").LocalPlayer
 -- Function Setup
