@@ -7,7 +7,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/vFis
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "Bladeball Lowbudget"
    },
-   KeySystem = true, -- turned
+   KeySystem = nil, -- turned
    KeySettings = {
       Title = "Fuck You if you skid",
       Subtitle = "Skidder? nuh uh",
