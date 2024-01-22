@@ -1,16 +1,11 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/vFishyTurtle/wiihub/main/rayfield'))()local Window = Rayfield:CreateWindow({
-   Name = "DONTRUNDONTTRIPXDXDXDXD",
-   LoadingTitle = "You Loaded Torso100",
-   LoadingSubtitle = "by torso100 on discord.",
+   Name = "NVD Bladeball Lowbudget",
+   LoadingTitle = "You Loaded Bladeball script by NVD",
+   LoadingSubtitle = "by NectoVerse Development on discord.",
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Torso100 HUB"
-   },
-   Discord = {
-      Enabled = true,
-      Invite = "Z9EV34nAxt", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+      FileName = "Bladeball Lowbudget"
    },
    KeySystem = nil, -- Set this to true to use our key system
    KeySettings = {
