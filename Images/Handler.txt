@@ -1,0 +1,1 @@
+this file is the handler for the Folder Images.
