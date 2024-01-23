@@ -186,6 +186,17 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
+
+tab.newButton("Ninja Tycoon NVD", "Just nameless admin but modified and owned/recreated by NectoVerse.", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Ninja-Tycoon-NVD.lua'),true))() 
+    print('Script Loaded')
+end)
+
+tab.newButton("BladeBall Lowbudget", "Just nameless admin but modified and owned/recreated by NectoVerse.", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Bladeball-LowBudget%5BNVD%5D.lua'),true))() 
+    print('Script Loaded')
+end)
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
