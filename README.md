@@ -15,4 +15,4 @@ Our releases Contain our scripts which are made by NVD.
 - Token ID: A9aj9Hh8H8ah8ah8j
 - 16 Digit Token.
 
-![NVD-thumbnail](Images/NectoVerse.png)
+<img src="Images/NectoVerse.png" width="300" height="200">
