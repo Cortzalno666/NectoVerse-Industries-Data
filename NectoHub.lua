@@ -26,7 +26,6 @@ loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"
 end)
 
 tab.newButton("Glitched map", "Makes map look rainbow and glitched", function()
-    --Made by SUPERSONIC GAMERZ 
 while true do
     for _, part in ipairs(workspace:GetDescendants()) do
         if part:IsA("BasePart") then
@@ -63,6 +62,11 @@ end)
 
 tab.newButton("The script v hub", "V hub scriPt", function()
 loadstring(game:HttpGet('https://pastebin.com/raw/dzNcLr0C'))()
+    print('Hello!')
+end)
+
+tab.newButton("Stream Sniper", "Dont know if it still works", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/StreamSniper.lua"))()
     print('Hello!')
 end)
 
@@ -118,6 +122,11 @@ end)
 tab.newButton("GangTeng hub", "Best keyless bloxfruits script", function()
 loadstring(game:HttpGet("https://isnahamzahpastebin.tech/v1/gantenghubv1_026"))()
     print('Script Loaded')
+end)
+
+tab.newButton("DeX Explorer", "If you are dev try this", function()
+loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+    print('Hello!')
 end)
 
 -- Exclusives Number 3 tab for some scripts
