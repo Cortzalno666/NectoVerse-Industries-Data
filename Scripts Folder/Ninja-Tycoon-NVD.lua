@@ -2,9 +2,9 @@
 local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 -- Creating the GUI
 local GUI = Mercury:Create{
-    Name = "NectoVerse",
+    Name = "Mercury",
     Size = UDim2.fromOffset(600, 400),
-    Theme = NectoVerse.Themes.Dark,
+    Theme = Mercury.Themes.Dark,
     Link = "https://github.com/deeeity/mercury-lib"
 }
 -- Creating the Tab 1
