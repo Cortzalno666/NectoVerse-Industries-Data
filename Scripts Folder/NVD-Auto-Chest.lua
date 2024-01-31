@@ -13,4 +13,4 @@ getgenv().Config = {
     ["Server Discord"] = "https://discord.gg/aPevmdnnge"
 }
 repeat wait() until game:IsLoaded()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/Chest-Farm.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/blob/master/Scripts%20Folder/Scripts%20folder%20%5BV2%5D/Farm.lua"))()
