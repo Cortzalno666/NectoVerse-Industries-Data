@@ -14,3 +14,5 @@ getgenv().Config = {
 }
 repeat wait() until game:IsLoaded()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/blob/master/Scripts%20Folder/Scripts%20folder%20%5BV2%5D/Farm.lua"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/blob/master/Scripts%20Folder/Scripts%20folder%20%5BV2%5D/Farm.lua"))()
