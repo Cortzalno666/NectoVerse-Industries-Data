@@ -4,8 +4,8 @@
 
 - Our Products Are Newly Produced recently That's why our hub doesnt have any much products. Our Launcher and hub are the first Products AKA *Script*. it's a very good product produced this year by NectoVerse.
 
-- NectoHUB Version: 0.1.9
-- NectoLauncher Version: 0.0.7
+- NectoHUB Version: 2.0.0
+- NectoLauncher Version: 2.0.0
 
 
 Our releases Contain our scripts which are made by NVD.
