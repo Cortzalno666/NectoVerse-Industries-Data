@@ -206,6 +206,21 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
+tab.newButton("Auto Chest farm", "Pre Release", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/Security/Scripts%20Folder/NVD-Auto-Chest.lua'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("NoStun & Speed Of Flash", "One of best", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/Security/Scripts%20Folder/NoStun-FlashSpeed.lua'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Player spectator", "Spy", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/Security/Scripts%20Folder/Player-Spectator.lua'),true))()
+    print('Script Loaded')
+end)
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
