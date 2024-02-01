@@ -8,6 +8,13 @@ getgenv().options={
     AntiLog=true,
     AutoJoin=true
 }
+game.StarterGui:SetCore("SendNotification", 
+  { Title = "NectoVerse Security"; 
+    Text = "Made by NectoVerse Development, Protecting you in BG."; 
+    Icon = ""; 
+    Button1 = "Okay Ty!",
+    Duration = 20; }) 
+
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local StarterGui=game:GetService("StarterGui")
