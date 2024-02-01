@@ -3,7 +3,7 @@
 -- The Creator username is KHANTELL in roblox
 -- The creator username is deleted_tensei_lawden in discord
 
--- GOING TO BE RELEASED ON SCRIPTBLOX!
+-- RELEASED IN SCRIPT BLOX!
 
 -- V0.0.1
 -- NectoLauncher Status: Online
@@ -30,7 +30,7 @@ end)
 -- Launching button
 tab.newButton("Launch NectoHub", "NectoHub Launcher V0.0.1", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoHub.lua'))()
-      print('NectoHub V0.0.1 Launched')
+      print('NectoHub V2 Launched')
 end)
 
 tab.newLabel("Status Tab")
