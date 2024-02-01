@@ -221,6 +221,21 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
+tab.newButton("NVD Netless", "Netless recreation but better", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Netless-RC.lua'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("NVD Anti-Afk", "Anti Afk by NVD", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/Security/Scripts%20Folder/Anti-Afk.lua'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("NVD Guardian/Security", "Guardian to protect you in BG", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/NVD-Guardian.lua'),true))()
+    print('Script Loaded')
+end)
+
 -- Settings Tab
 local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
 
