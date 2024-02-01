@@ -1,5 +1,9 @@
 # NectoVerse-Industries--Data
 
+```
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
+```
+
 - Launcher Data For NectoVerse Products In future.
 
 - Our Products Are Newly Produced recently That's why our hub doesnt have any much products. Our Launcher and hub are the first Products AKA *Script*. it's a very good product produced this year by NectoVerse.
