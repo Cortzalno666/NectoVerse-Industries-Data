@@ -241,18 +241,24 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
--- Settings Tab
-local tab = DrRayLibrary.newTab("Settings", "ImageIdHere")
+-- Slap battles tab
+local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
 
-local mainColor = Color3.fromRGB(10, 30, 10) -- Customize as you wish; these are in RGB format. (mainColor applies to main colors like background, buttons, etc.)
-
-local secondColor = Color3.fromRGB(50, 50, 10) -- Secondary Color; applies to Toggle when activated and slider background.
-
-window:SetTheme(mainColor, secondColor)
-
-tab.newInput("Introduction", "Introduce Yourself", function(text)
-    print("Entered text: " .. text)
+tab.newButton("Spawn Cloud", "Spawn a cloud with any glove.", function()
+game.ReplicatedStorage.CloudAbility:FireServer()
+    print('Script Loaded')
 end)
+
+tab.newButton("Spawn golden Cloud", "Spawn a golden cloud with any glove.", function()
+game.ReplicatedStorage.NimbusAbility:FireServer()
+    print('Script Loaded')
+end)
+
+tab.newButton("Spawn minions of null", "Spawn a portal for minions to come with any glove.", function()
+game.ReplicatedStorage.NullAbility:FireServer()
+    print('Script Loaded')
+end)
+
 
 window:Open()
 window:Close()
