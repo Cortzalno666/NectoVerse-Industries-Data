@@ -1,6 +1,7 @@
 -- Loaded SCRIPT!
+-- Lib = DrRay
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
-local window = DrRayLibrary:Load("NectoHUB V0.0.1", "Default")
+local window = DrRayLibrary:Load("NectoHUB V5", "Default")
 
 -- Exclusive 1 For some scripts only
 local tab = DrRayLibrary.newTab("ExclusiveS 1", "ImageIdHere")
@@ -236,8 +237,23 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
-tab.newButton("NVD Guardian/Security", "Guardian to protect you in BG", function()
+tab.newButton("011101101110000001100101", "01010110001?", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/g00pgui%20v1(Undetectable).lua'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Anti AFK V2", "an Anti-Afk that has a GUI. it will tel if its active or not.", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/ANTI_AFK.lua'))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Fly", "an useful fly script", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Fly.lua'))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Teleport Tool", "an useful TPTOOL", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Teleport_Tool.lua'))()
     print('Script Loaded')
 end)
 
