@@ -6,10 +6,10 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
 
 - Launcher Data For NectoVerse Products In future.
 
-- Our Products Are Newly Produced recently That's why our hub doesnt have any much products. Our Launcher and hub are the first Products AKA *Script*. it's a very good product produced this year by NectoVerse.
+- Our Products Are Newly Produced recently That's why our hub doesnt have any much products. Our Launcher and hub are the first Products AKA *Script*. it's a very good product produced in 2023 by NectoVerse.
 
-- NectoHUB Version: 2.0.0
-- NectoLauncher Version: 2.0.0
+- NectoHUB Version: 5
+- NectoLauncher Version: 3.0.4
 
 
 Our releases Contain our scripts which are made by NVD.
