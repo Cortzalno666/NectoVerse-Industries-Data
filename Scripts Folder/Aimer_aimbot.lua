@@ -10,11 +10,11 @@ FOVring.Thickness = 2
 FOVring.Color = Color3.fromRGB(128, 0, 128) -- Purple color
 FOVring.Filled = false
 FOVring.Radius = fov
-FOVring.Position = Cam.ViewportSize / 1
+FOVring.Position = Cam.ViewportSize / 2
 
 local function updateDrawings()
     local camViewportSize = Cam.ViewportSize
-    FOVring.Position = camViewportSize / 1
+    FOVring.Position = camViewportSize / 2
 end
 
 local function onKeyDown(input)
@@ -35,7 +35,7 @@ end
 local function getClosestPlayerInFOV(trg_part)
     local nearest = nil
     local last = math.huge
-    local playerMousePos = Cam.ViewportSize / 1
+    local playerMousePos = Cam.ViewportSize / 2
 
     for _, player in ipairs(Players:GetPlayers()) do
         if player ~= Players.LocalPlayer then
