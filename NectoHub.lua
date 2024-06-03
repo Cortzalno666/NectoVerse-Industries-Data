@@ -183,6 +183,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AdelOnTheTop/Adel-Hub
     print('Script Loaded')
 end)
 
+tab.newButton("Punch fling tool", "(Not mine) one of the best fling tool", function()
+loadstring(game:HttpGet(('http://pastefy.app/GvnHVjT5/raw'),true))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
