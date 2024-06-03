@@ -71,6 +71,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscella
     print('Hello!')
 end)
 
+tab.newButton("BABFT autofarm", "(not mine) one  of the best BABFT script, use NV anti-afk gui to farm its 24/7", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Waza80/scripts-new/main/BuildABoat.lua"))()
+    print('Script loaded!')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
