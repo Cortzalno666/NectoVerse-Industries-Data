@@ -267,6 +267,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Script Loaded')
 end)
 
+tab.newButton("Slap Battles updated", "first ever none  universal", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Slap%20battles.lua"))()
+    print('Script Loaded')
+end)
 -- Slap battles tab
 local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
 
@@ -285,6 +289,10 @@ game.ReplicatedStorage.NullAbility:FireServer()
     print('Script Loaded')
 end)
 
+tab.newButton("Auto baller farm", "auto", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))()
+    print('Script Loaded')
+end)
 
 window:Open()
 window:Close()
