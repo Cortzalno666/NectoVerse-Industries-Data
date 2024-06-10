@@ -83,57 +83,57 @@ tab.newButton("Experimental place", "15", function()
     print('Hello!')
 end)
 
-tab.newButton("Button", "16", function()
+tab.newButton("Soft updating dododo", "16", function()
     game:GetService("TeleportService"):Teleport(12712288037) --  Soft updating dododo|16
     print('Hello!')
 end)
 
-tab.newButton("Button", "17", function()
+tab.newButton("Slap battles A", "17", function()
     game:GetService("TeleportService"):Teleport(12845859004) --  Slap battles A|17
     print('Hello!')
 end)
 
-tab.newButton("Button", "18", function()
+tab.newButton("200 Players", "18", function()
     game:GetService("TeleportService"):Teleport(13592060273) --  200 players|18
     print('Hello!')
 end)
 
-tab.newButton("Button", "19", function()
+tab.newButton("The dark realm", "19", function()
     game:GetService("TeleportService"):Teleport(13833961666) --  The dark realm|19
     print('Hello!')
 end)
 
-tab.newButton("Button", "20", function()
+tab.newButton("The null zone", "20", function()
     game:GetService("TeleportService"):Teleport(14422118326) --  The null zone|20
     print('Hello!')
 end)
 
-tab.newButton("Button", "21", function()
+tab.newButton("Tower defence", "21", function()
     game:GetService("TeleportService"):Teleport(15228348051) --  Tower defence|21
     print('Hello!')
 end)
 
-tab.newButton("Button", "22", function()
+tab.newButton("Christmas Event", "22", function()
     game:GetService("TeleportService"):Teleport(15507333474) --  Christmas Event|22
     print('Hello!')
 end)
 
-tab.newButton("Button", "23", function()
+tab.newButton("The C", "23", function()
     game:GetService("TeleportService"):Teleport(15880267452) --  The C| 23
     print('Hello!')
 end)
 
-tab.newButton("Button", "24", function()
+tab.newButton("Staff Application", "24", function()
     game:GetService("TeleportService"):Teleport(16034567693) --  Staff application| 24
     print('Hello!')
 end)
 
-tab.newButton("Button", "25", function()
+tab.newButton("SR matchmaking testing", "25", function()
     game:GetService("TeleportService"):Teleport(16467982597) --  Sr matchmaking testing| 25
     print('Hello!')
 end)
 
-tab.newButton("Button", "26", function()
+tab.newButton("?", "26", function()
     game:GetService("TeleportService"):Teleport(11828384869) --? |26
     print('Hello!')
 end)
