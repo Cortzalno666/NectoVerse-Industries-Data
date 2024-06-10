@@ -1,4 +1,5 @@
 -- Total 26 places
+-- Some places might not work, some  kick you and some are broken.
 
 -- Installing ui
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
