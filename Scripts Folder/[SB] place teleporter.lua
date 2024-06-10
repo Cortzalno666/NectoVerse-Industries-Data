@@ -137,3 +137,53 @@ tab.newButton("?", "26", function()
     game:GetService("TeleportService"):Teleport(11828384869) --? |26
     print('Hello!')
 end)
+-- Extras
+local tab = DrRayLibrary.newTab("Extras", "ImageIdHere")
+
+tab.newButton("Slap battles updated", "NVD made SB hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Slap%20battles.lua"))()
+    print('Hello!')
+end)
+
+tab.newButton("Fly gui", "fly gui", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Fly.lua'))))()
+    print('Hello!')
+end)
+
+tab.newButton("Tp tool", "Teleporting tool", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Teleport_Tool.lua'))()
+    print('Hello!')
+end)
+
+tab.newButton("Join small server", "Join a small server", function()
+    local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+  local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+  return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+  local Servers = ListServers(Next)
+  Server = Servers.data[1]
+  Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+    print('Hello!')
+end)
+
+tab.newButton("Anti AFK gui", "Anti afk", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/ANTI_AFK.lua'))()
+    print('Hello!')
+end)
+
+window:Toggle()
+window:Open()
+window:Close()
+window:Hide()
+window:Show()
