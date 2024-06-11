@@ -10,178 +10,128 @@ print("HI")
 end)
 
 KillingCheats:CreateButton("100 players", function()
-    
+    game:GetService("TeleportService"):Teleport(8550289322)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Place N.39", function()
-    
+    game:GetService("TeleportService"):Teleport(8550291053)
 print("HI")
 end)
 
 KillingCheats:CreateButton("No oneshot", function()
-    
+    game:GetService("TeleportService"):Teleport(9015014224)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Testing place", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(9020359053)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Glove customization", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(9068206286)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Slap royale queue", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(9412139218)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Ice essence", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(17290438723)
 print("HI")
 end)
 
 KillingCheats:CreateButton("M-making", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(9426735655)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Slap royale matchmaking", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(9426795465)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Slap royale", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(9431156611)
 print("HI")
 end)
 
 KillingCheats:CreateButton("??? m", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(11359765900)
 print("HI")
 end)
 
 KillingCheats:CreateButton("??", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(11367956190)
 print("HI")
 end)
 
 KillingCheats:CreateButton("KS only", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(11520107397)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Experimental place", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(12432152490)
 print("HI")
 end)
 
 KillingCheats:CreateButton("Soft updating dododo", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+    game:GetService("TeleportService"):Teleport(12712288037)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("Slap battles A", function()
+    game:GetService("TeleportService"):Teleport(12845859004)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("200 players", function()
+    game:GetService("TeleportService"):Teleport(13592060273)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("The dark realm", function()
+    game:GetService("TeleportService"):Teleport(13833961666)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("The null zone", function()
+    game:GetService("TeleportService"):Teleport(14422118326)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("Tower defence", function()
+    game:GetService("TeleportService"):Teleport(15228348051)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("Christmas event", function()
+    game:GetService("TeleportService"):Teleport(15507333474)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("The C", function()
+    game:GetService("TeleportService"):Teleport(15880267452)
 print("HI")
 end)
 
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("Staff application", function()
+    game:GetService("TeleportService"):Teleport(16034567693)
 print("HI")
 end)
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
-print("HI")
-end)
-
-KillingCheats:CreateButton("Brazil", function()
-    game:GetService("TeleportService"):Teleport(7234087065)
+KillingCheats:CreateButton("SR matchmaking testing", function()
+    game:GetService("TeleportService"):Teleport(16467982597)
 print("HI")
 end)
 
-game:GetService("TeleportService"):Teleport(8550289322)  --  100 players|2
-
-game:GetService("TeleportService"):Teleport(8550291053)  --  Place N.(39)|3
-
-game:GetService("TeleportService"):Teleport(9015014224)  --  No oneshot|4
-
-game:GetService("TeleportService"):Teleport(9020359053)  --  Testing|5
-
-game:GetService("TeleportService"):Teleport(9068206286)  --  Glove Customization|6
-
-game:GetService("TeleportService"):Teleport(9412139218)  --  Slap Royale Queue|7
-
-game:GetService("TeleportService"):Teleport(17290438723)  --  Ice essence|8
-
-game:GetService("TeleportService"):Teleport(9426735655)  --  M-Making|9
-
-game:GetService("TeleportService"):Teleport(9426795465) --  Slap Royale matchmaking|10
-
-game:GetService("TeleportService"):Teleport(9431156611)  --  Slap Royale|11
-
-game:GetService("TeleportService"):Teleport(11359765900) --  ??? m|12
-
-game:GetService("TeleportService"):Teleport(11367956190) --  ??|13
-
-game:GetService("TeleportService"):Teleport(11520107397) --  KS only|14
-
-game:GetService("TeleportService"):Teleport(12432152490) --  Experimental Place|15
-
-game:GetService("TeleportService"):Teleport(12712288037) --  Soft updating dododo|16
-
-game:GetService("TeleportService"):Teleport(12845859004) --  Slap battles A|17
-
-game:GetService("TeleportService"):Teleport(13592060273) --  200 players|18
-
-game:GetService("TeleportService"):Teleport(13833961666) --  The dark realm|19
-
-game:GetService("TeleportService"):Teleport(14422118326) --  The null zone|20
-
-game:GetService("TeleportService"):Teleport(15228348051) --  Tower defence|21
-
-game:GetService("TeleportService"):Teleport(15507333474) --  Christmas Event|22
-
-game:GetService("TeleportService"):Teleport(15880267452) --  The C| 23
-
-game:GetService("TeleportService"):Teleport(16034567693) --  Staff application| 24
-
-game:GetService("TeleportService"):Teleport(16467982597) --  Sr matchmaking testing| 25
-
-game:GetService("TeleportService"):Teleport(11828384869) --? |26
+KillingCheats:CreateButton("?", function()
+    game:GetService("TeleportService"):Teleport(11828384869)
+print("HI")
+end)
 
 local PhantomForcesWindow = Library:NewWindow("Extras")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Slap%20battles.lua"))()
