@@ -141,7 +141,7 @@ print("HI")
 end)
 
 KillingCheats:CreateButton("Fly gui", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Fly.lua'))))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Fly.lua'))()
 print("HI")
 end)
 
