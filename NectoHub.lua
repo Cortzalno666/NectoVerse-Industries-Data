@@ -294,6 +294,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScr
     print('Script Loaded')
 end)
 
+tab.newButton("Rojo abuser", "one of the best rojo abuser", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BreApple/RobloxUI/main/SBRojoScript"))()
+    print('Script Loaded')
+end)
+
+
+
 tab.newLabel("This section below  is place teleporter")
 
 tab.newButton("Brazil", "1", function()
