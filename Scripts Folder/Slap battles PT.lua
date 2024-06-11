@@ -2,7 +2,7 @@ local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/blood
 
 local PhantomForcesWindow = Library:NewWindow("SBPT")
 
-local KillingCheats = PhantomForcesWindow:NewSection("Main")
+local KillingCheats = PhantomForcesWindow:NewSection("TP Sec.1")
 
 KillingCheats:CreateButton("Brazil", function()
     game:GetService("TeleportService"):Teleport(7234087065)
@@ -29,6 +29,8 @@ KillingCheats:CreateButton("Testing place", function()
 print("HI")
 end)
 
+local KillingCheats = PhantomForcesWindow:NewSection("TP Sec.2")
+
 KillingCheats:CreateButton("Glove customization", function()
     game:GetService("TeleportService"):Teleport(9068206286)
 print("HI")
@@ -53,6 +55,8 @@ KillingCheats:CreateButton("Slap royale matchmaking", function()
     game:GetService("TeleportService"):Teleport(9426795465)
 print("HI")
 end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("TP Sec.3")
 
 KillingCheats:CreateButton("Slap royale", function()
     game:GetService("TeleportService"):Teleport(9431156611)
@@ -79,6 +83,8 @@ KillingCheats:CreateButton("Experimental place", function()
 print("HI")
 end)
 
+local KillingCheats = PhantomForcesWindow:NewSection("TP Sec.4")
+
 KillingCheats:CreateButton("Soft updating dododo", function()
     game:GetService("TeleportService"):Teleport(12712288037)
 print("HI")
@@ -104,6 +110,8 @@ KillingCheats:CreateButton("The null zone", function()
 print("HI")
 end)
 
+local KillingCheats = PhantomForcesWindow:NewSection("TP Sec.5")
+
 KillingCheats:CreateButton("Tower defence", function()
     game:GetService("TeleportService"):Teleport(15228348051)
 print("HI")
@@ -128,12 +136,14 @@ KillingCheats:CreateButton("SR matchmaking testing", function()
 print("HI")
 end)
 
+local KillingCheats = PhantomForcesWindow:NewSection("TP Sec.6")
+
 KillingCheats:CreateButton("?", function()
     game:GetService("TeleportService"):Teleport(11828384869)
 print("HI")
 end)
 
-local KillingCheats = PhantomForcesWindow:NewSection("Extras")
+local PhantomForcesWindow = Library:NewWindow("Extras")
 
 KillingCheats:CreateButton("SB hub updated", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Slap%20battles.lua"))()
@@ -151,7 +161,20 @@ print("HI")
 end)
 
 KillingCheats:CreateButton("join small server", function()
-        
+        local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+  local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+  return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+  local Servers = ListServers(Next)
+  Server = Servers.data[1]
+  Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
 print("HI")
 end)
 
