@@ -133,7 +133,7 @@ KillingCheats:CreateButton("?", function()
 print("HI")
 end)
 
-local PhantomForcesWindow = Library:NewWindow("Extras")
+local KillingCheats = PhantomForcesWindow:NewSection("Extras")
 
 KillingCheats:CreateButton("SB hub updated", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Slap%20battles.lua"))()
