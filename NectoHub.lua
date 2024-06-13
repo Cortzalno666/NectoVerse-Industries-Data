@@ -329,11 +329,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScr
     print('Script Loaded')
 end)
 
-tab.newButton("R20", "well known script", function()    
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/cheesynob39/R2O/main/Main.lua'),true))()
-    print('Hello!')
-end)
-
 tab.newButton("Kill aura", "Aura killer", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Sb%20kill%20aura'),true))()
     print('Hello!')
