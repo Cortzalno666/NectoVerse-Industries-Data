@@ -299,7 +299,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/BreApple/RobloxUI/mai
     print('Script Loaded')
 end)
 
-
+tab.newButton("Auto max charge kinetic", "Best kinetic charger", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/GetFullChargeKinetic.lua"))()
+    print('Script Loaded')
+end)
 
 tab.newLabel("This section below  is place teleporter")
 
