@@ -329,10 +329,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScr
     print('Script Loaded')
 end)
 
-tab.newButton("Kill aura", "Aura killer", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Sb%20kill%20aura'),true))()
-    print('Script Loaded')
+tab.newButton("Kill aura", "?", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Sb%20kill%20aura'),true))()
+    print('Script Loaded')
 end)
+
 
 tab.newLabel("This section below  is place teleporter")
 
