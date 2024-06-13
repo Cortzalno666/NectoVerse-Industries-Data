@@ -329,6 +329,33 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScr
     print('Script Loaded')
 end)
 
+tab.newButton("R20", "well known script", function()    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cheesynob39/R2O/main/Main.lua"))()
+    print('Hello!')
+end)
+
+tab.newButton("Kill aura", "Aura killer", function()
+    function isSpawned(player)
+   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+       return true
+   else
+       return false
+   end
+end
+
+while wait() do
+   for i, v in pairs(game.Players:GetPlayers()) do
+       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 45 then
+               game:GetService("ReplicatedStorage").b:FireServer(v.Character["Right Arm"])
+               wait(0.1)
+           end
+       end
+   end
+end
+    print('Hello!')
+end)
+
 tab.newLabel("This section below  is place teleporter")
 
 tab.newButton("Brazil", "1", function()
