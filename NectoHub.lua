@@ -330,7 +330,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScr
 end)
 
 tab.newButton("R20", "well known script", function()    
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/cheesynob39/R2O/main/Main.lua"))()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/cheesynob39/R2O/main/Main.lua'),true))()
     print('Hello!')
 end)
 
