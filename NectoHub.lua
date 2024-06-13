@@ -334,6 +334,10 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
+tab.newButton("Destroyer X", "?:)", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Aquoupi/DestroyerX/main/DestroyerX"))()
+    print('Script Loaded')
+end)
 
 tab.newLabel("This section below  is place teleporter")
 
