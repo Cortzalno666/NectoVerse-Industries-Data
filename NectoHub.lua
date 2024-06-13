@@ -135,6 +135,31 @@ loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))
     print('Hello!')
 end)
 
+tab.newButton("Shaders", "Shaders", function()
+getgenv().RTX_Name = "rtxnamehere" --not really needed if you don't need it
+--[[
+examples auto loads features :
+getgenv().RTX_Name = "Midday lite" 
+
+-Morning
+-Afternoon
+-Midday
+-Evening
+-Night
+-Midnight
+
+-Morning lite
+-Midday lite
+-Afternoon lite
+-Evening lite
+-Night lite
+-Midnight lite
+
+]]
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Shaders.lua'),true))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
