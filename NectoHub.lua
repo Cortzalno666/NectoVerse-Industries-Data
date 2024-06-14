@@ -339,6 +339,16 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Aquoupi/DestroyerX/ma
     print('Script Loaded')
 end)
 
+tab.newButton("Do you see me? [INF invibility]", "Use diff glove after using the script or a inf red screen will be stuck. rejoin or join a small server to fix.", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Do%20you%20see%20me%3F.lua",true))();
+    print('Script Loaded')
+end)
+
+tab.newButton("Brazil kicker [Doesnt work sometimes or many times]", "Firework required", function()
+loadstring(game:HttpGet("https://pastefy.app/eAFsNQoe/raw",true))();
+    print('Script Loaded')
+end)
+
 tab.newLabel("This section below  is place teleporter")
 
 tab.newButton("Brazil", "1", function()
