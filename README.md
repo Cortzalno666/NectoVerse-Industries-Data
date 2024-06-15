@@ -1,7 +1,7 @@
 # NectoVerse-Industries--Data
 
 ```
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
+loadstring(game:HttpGet(('https://envs.sh/eXL.txt'),true))()
 ```
 
 - Launcher Data For NectoVerse Products In future.
