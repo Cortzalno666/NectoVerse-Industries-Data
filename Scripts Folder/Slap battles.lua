@@ -7610,6 +7610,13 @@ Tab15:AddButton({
 })
 
 Tab15:AddButton({
+	Name = "Use original",
+	Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
+  	end    
+})
+	
+Tab15:AddButton({
 	Name = "Copy Subscribe DonjoSx [ DonjoScript ]",
 	Callback = function()
             setclipboard("www.youtube.com/@DonjoScript")
