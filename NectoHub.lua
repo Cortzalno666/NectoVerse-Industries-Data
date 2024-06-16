@@ -76,6 +76,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Waza80/scripts-new/ma
     print('Script loaded!')
 end)
 
+tab.newButton("Glitch v4", "An glitch script. control is Z X F E C", function()
+loadstring(game:HttpGet(('https://pastefy.app/s6DE4bNC/raw'),true))()
+    print('Script loaded!')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
