@@ -1,3 +1,4 @@
+game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge")
 -- Made By NectoVerse Development
 -- Launcher Link: loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
 -- This hub is not a custom scripts hub,this hub contains 3rd party scripts, there are 5 tabs only in 1 tab have our scripts and other tabs are 3rd party. enjoy.
