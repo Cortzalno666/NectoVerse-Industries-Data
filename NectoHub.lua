@@ -223,6 +223,11 @@ loadstring(game:HttpGet(('http://pastefy.app/GvnHVjT5/raw'),true))()
     print('Script Loaded')
 end)
 
+tab.newButton("Mobile Keyboard", "This is the better version than the Keyboard that originally was made", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GGH52lan/GGH52lan/main/keyboard.txt"))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
