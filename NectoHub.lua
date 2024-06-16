@@ -1,3 +1,4 @@
+game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge")
 -- Loaded SCRIPT!
 -- Lib = DrRay
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
