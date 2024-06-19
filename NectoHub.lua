@@ -87,6 +87,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script loaded!')
 end)
 
+tab.newButton("Codex", "An source code codex", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Codex.lua"))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
@@ -241,6 +246,11 @@ end)
 
 tab.newButton("Clone script", "Illusion Script", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("SynapseX", "An source code synapse", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/syn_ui_new.lua"))()
     print('Script Loaded')
 end)
 
