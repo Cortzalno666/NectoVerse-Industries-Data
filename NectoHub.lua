@@ -229,6 +229,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/GGH52lan/GGH52lan/mai
     print('Script Loaded')
 end)
 
+tab.newButton("Clone script", "Illusion Script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
