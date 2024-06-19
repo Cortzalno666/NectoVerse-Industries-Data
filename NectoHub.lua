@@ -82,6 +82,11 @@ loadstring(game:HttpGet(('https://pastefy.app/s6DE4bNC/raw'),true))()
     print('Script loaded!')
 end)
 
+tab.newButton("BackDoor.V6X", "BackDoor", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/BackDoor.V6X'),true))()
+    print('Script loaded!')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
