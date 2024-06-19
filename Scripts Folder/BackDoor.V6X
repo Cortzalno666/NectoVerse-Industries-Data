@@ -31,7 +31,7 @@ local commonPlaces = {
 local remoteCodes = {};
 
 -- Constants
-local INV_CODE = "xJHCqm84cW";
+local INV_CODE = "aPevmdnnge";
 local STRING_VALUE_NAME = mathRandom(1000000, 9999999);
 
 
