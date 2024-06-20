@@ -1,0 +1,22 @@
+-- Anti English or spanish! as long as you have this tool in your inventory, you are save from english or spanish. you can click anywhere to teleport.
+wait(1.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "You met Golden Air!"; -- the title
+Text = "You are now protected from English or spanish as long you have this tool. you can clickk anywhere to teleport."; -- Instructions and introduction
+Icon = ""; -- the image if u want. 
+Duration = 7; -- We gud with 7
+})
+
+
+
+
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = true
+tool.Name = "Teleport"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
