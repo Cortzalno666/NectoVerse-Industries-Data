@@ -258,7 +258,6 @@ tab.newButton("SynapseX", "An source code synapse", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/syn_ui_new.lua"))()
     print('Script Loaded')
 end)
-
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
@@ -335,6 +334,11 @@ end)
 
 tab.newButton("Slap Battles updated", "first ever none  universal", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Slap%20battles.lua"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Get golden air", "Immune to English or spanish", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Golden%20air.lua'))()
     print('Script Loaded')
 end)
 -- Slap battles tab
