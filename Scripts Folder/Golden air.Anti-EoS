@@ -13,7 +13,7 @@ Duration = 7; -- We gud with 7
 mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = true
-tool.Name = "Teleport"
+tool.Name = "Golden Air (Anti-EoS{TP blink})"
 tool.Activated:connect(function()
 local pos = mouse.Hit+Vector3.new(0,2.5,0)
 pos = CFrame.new(pos.X,pos.Y,pos.Z)
