@@ -181,6 +181,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v8
     print('Hello!')
 end)
 
+tab.newButton("Server Browser", "m", function()
+loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
