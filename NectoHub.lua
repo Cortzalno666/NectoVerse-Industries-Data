@@ -23,7 +23,7 @@ loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub
 end)
 
 tab.newButton("Infinite yeild", "Infinite yield spawner", function()
-loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     print('Hello!')
 end)
 
