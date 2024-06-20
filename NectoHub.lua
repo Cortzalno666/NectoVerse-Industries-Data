@@ -258,6 +258,12 @@ tab.newButton("SynapseX", "An source code synapse", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/syn_ui_new.lua"))()
     print('Script Loaded')
 end)
+
+tab.newButton("Opfinity", "an trolling gui", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/OPfinity.lua'))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
