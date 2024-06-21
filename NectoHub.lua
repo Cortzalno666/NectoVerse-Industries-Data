@@ -196,6 +196,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Hello!')
 end)
 
+tab.newButton("Melon Hub", "An gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Melon%20hub.lua"))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
@@ -271,6 +276,11 @@ end)
 
 tab.newButton("Opfinity", "an trolling gui", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/OPfinity.lua'))()
+    print('Script Loaded')
+end)
+
+tab.newButton("UTG (Pendulum hub)", "UTG", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
     print('Script Loaded')
 end)
 
