@@ -92,6 +92,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main
     print('Script Loaded')
 end)
 
+tab.newButton("FE kidnap gui", "Tools required", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Kidnap%20again"))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
