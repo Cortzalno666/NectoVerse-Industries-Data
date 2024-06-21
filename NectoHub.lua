@@ -112,6 +112,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Script Loaded')
 end)
 
+tab.newButton("Syntax V2", "Key: Syntaxbesthub", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxRebornOfficial/main/SyntaxReborn'),true))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
@@ -321,6 +326,11 @@ end)
 
 tab.newButton("Ruin III", "Ruin has been lurking...", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Ruin.V3'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Syntax V3", "Key: SyntaxV3Free", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Memeboiyot/Syntax-V3-Free/main/Syntax%20v3", true))()
     print('Script Loaded')
 end)
 
