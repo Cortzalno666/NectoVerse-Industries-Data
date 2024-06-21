@@ -1,0 +1,149 @@
+-- installing the library and window
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local GUI = Mercury:Create{
+    Name = "Genesis.fe Loader",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/deeeity/mercury-lib"
+    }
+    
+-- Installing the Tabs and scripts
+local Tab = GUI:Tab{
+	Name = "Loders",
+	Icon = "rbxassetid://8569322835"
+}
+
+Tab:Button{
+	Name = "AK-47",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/AK-47"))()
+ end
+}
+	Tab:Button{
+	Name = "Goner",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
+ end
+}
+	Tab:Button{
+	Name = "Ban hammer",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
+ end
+}
+	Tab:Button{
+	Name = "Banisher",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Banisher"))()
+ end
+}
+	Tab:Button{
+	Name = "Dearsister",
+	Description = nil,
+	Callback = function() end
+}
+Tab:Button{
+	Name = "Gale fighter",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Gale%20Fighter"))()
+ end
+}
+	Tab:Button{
+	Name = "Good cop bad cop",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Good%20Cop%20Bad%20Cop"))()
+ end
+}
+	Tab:Button{
+	Name = "Karambit",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Karambit"))()
+ end
+}
+	Tab:Button{
+	Name = "Krystal dance",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Krystal%20Dance"))()
+ end
+}
+	Tab:Button{
+	Name = "Lightning canon",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
+ end
+}
+Tab:Button{
+	Name = "Linked sword",
+	Description = nil,
+	Callback = function()
+	DisableFlingHealthBar = false
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Linked%20Sword"))()
+ end
+}
+	Tab:Button{
+	Name = "Motorcycle",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Motorcycle"))()
+ end
+}
+	Tab:Button{
+	Name = "Neko",
+	Description = nil,
+	Callback = function()
+	DisableFlingHealthBar = false
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neko"))()
+ end
+}
+	Tab:Button{
+	Name = "Naptunian V",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neptunian%20V"))()
+ end
+}
+	Tab:Button{
+	Name = "Pistol",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Pistol"))()
+ end
+}
+Tab:Button{
+	Name = "Sadist genocider",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sadist%20Genocider"))()
+ end
+}
+	Tab:Button{
+	Name = "Sniper",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sniper"))()
+ end
+}
+	Tab:Button{
+	Name = "Star glitcher",
+	Description = nil,
+	Callback = function()
+    DisableFX = false
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Star%20Glitcher"))()
+ end
+}
+	Tab:Button{
+	Name = "Studio dummy",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"))()
+ end
+}
