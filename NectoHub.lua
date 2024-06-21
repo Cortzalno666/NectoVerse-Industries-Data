@@ -216,6 +216,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Hello!')
 end)
 
+tab.newButton("Ruin II", "The Ruin Has Awaken in its 2nd form", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Ruin.v2'),true))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
