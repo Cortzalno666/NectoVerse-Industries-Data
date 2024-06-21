@@ -294,6 +294,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hub
     print('Script Loaded')
 end)
 
+tab.newButton("REFLUX", "the hollow....", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/REFLUX.lua'),true))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
