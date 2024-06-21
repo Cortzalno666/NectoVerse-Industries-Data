@@ -1,4 +1,16 @@
--- Check this before Executing this: https://pastebin.com/raw/eL8rQRSh
+-- You need required hats for this to work.
+--[[
+BTroblox : https://chromewebstore.google.com/detail/btroblox-making-roblox-be/hbkpclpemjeibhioopcebchdmohaieln
+
+Hats:
+https://www.roblox.com/catalog/48474313/Red-Roblox-Cap
+ 
+https://www.roblox.com/catalog/62724852/Chestnut-Bun
+ 
+https://www.roblox.com/catalog/48474294/ROBLOX-Girl-Hair
+ 
+https://www.roblox.com/catalog/63690008/Pal-Hair
+]]
 loadstring(game:HttpGet("https://pastebin.com/raw/PV3bu1cg"))()
 
 m = game.Players.LocalPlayer
