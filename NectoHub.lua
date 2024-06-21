@@ -107,6 +107,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
+tab.newButton("Vereus", "Cmere sweetie", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Vereus.lol',true))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
