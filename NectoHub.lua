@@ -97,6 +97,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Kidnap
     print('Script Loaded')
 end)
 
+tab.newButton("UTG v4", "UTG version n.4", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/UTG.V4"))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
@@ -105,8 +110,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-HUB/HUB/main
     print('Script Loaded')
 end)
 
-tab.newButton("FE UTG Gui", "Utg gui will load", function()
-loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/3e50ce0fdd03713dfbeb1845ee6f52d7/raw/630318908f56a984db9568a89e33eadb7998158a/feutg1",true))()
+tab.newButton("UTG v3", ":)", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
     print('Loading')
 end)
 
