@@ -186,6 +186,11 @@ loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true
     print('Hello!')
 end)
 
+tab.newButton("Honored one", "Hats needed to use", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Honored.lua'),true))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
