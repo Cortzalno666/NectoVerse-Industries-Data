@@ -206,6 +206,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Hello!')
 end)
 
+tab.newButton("Sin Dragon", "The dragon of sin's", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Sin%20dragon.lua'),true))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
