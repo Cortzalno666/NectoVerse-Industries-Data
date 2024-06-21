@@ -206,7 +206,7 @@ loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true
     print('Hello!')
 end)
 
-tab.newButton("Honored one", "Hats needed to use", function()
+tab.newButton("Honored one", "No hats version", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Honored.lua'),true))()
     print('Hello!')
 end)
@@ -400,6 +400,11 @@ end)
 
 tab.newButton("Get golden air", "Immune to English or spanish", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Golden%20air.lua'))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Genesis.FE loader", "The loader of every genesis fe scripts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Genesis%20FE.loader"))()
     print('Script Loaded')
 end)
 -- Slap battles tab
