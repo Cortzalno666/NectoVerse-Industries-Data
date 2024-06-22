@@ -63,3 +63,5 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVer
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Crosshair.lua"))()
 -- aimbot
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Aimer_aimbot.lua'))()
+-- mobile shiftlock (possibly can be in Desktop/pc)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Shiftlock.mobile'))()
