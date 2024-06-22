@@ -1,8 +1,8 @@
 -- Notification loader
 local players = game:GetService("Players")
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Aimer Z4 loaded!";
-    Text = "Aimer Z4 is like Z3 but has another feature" .. players.LocalPlayer.DisplayName;
+    Title = "Aimer Z5 loaded!";
+    Text = "This doesnt have aimbot" .. players.LocalPlayer.DisplayName;
     Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
     Duration = 5
 })
