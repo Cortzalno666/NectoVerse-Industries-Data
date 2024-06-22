@@ -1,3 +1,11 @@
+-- Notification loader
+local players = game:GetService("Players")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Aimer Z3 loaded!";
+    Text = "Aimer Z3 has circle aimbot which makes this annoying." .. players.LocalPlayer.DisplayName;
+    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Duration = 5
+})
 -- Esp
 loadstring(game:HttpGet("https://pastebin.com/raw/s7viVmDR"))()
 local FillColor = Color3.fromRGB(175,25,255)
