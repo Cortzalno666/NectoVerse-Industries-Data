@@ -159,7 +159,7 @@ UserInputService.InputBegan:Connect(function(Input)
 
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Exunys Developer";
+                    Title = "!";
                     Text = "Tracers will be now coming from the bottom of your screen (Mode 1)";
                     Duration = 5;
                 })
@@ -171,7 +171,7 @@ UserInputService.InputBegan:Connect(function(Input)
 
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Exunys Developer";
+                    Title = "!";
                     Text = "Tracers will be now coming from the center of your screen (Mode 2)";
                     Duration = 5;
                 })
@@ -183,7 +183,7 @@ UserInputService.InputBegan:Connect(function(Input)
 
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Exunys Developer";
+                    Title = "!";
                     Text = "Tracers will be now coming from the position of your mouse cursor on your screen (Mode 3)";
                     Duration = 5;
                 })
@@ -194,7 +194,7 @@ UserInputService.InputBegan:Connect(function(Input)
         
         if _G.SendNotifications == true then
             game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "Exunys Developer";
+                Title = "!";
                 Text = "The tracers' visibility is now set to "..tostring(_G.TracersVisible)..".";
                 Duration = 5;
             })
@@ -230,7 +230,7 @@ if Success and not Errored then
 elseif Errored and not Success then
     if _G.SendNotifications == true then
         game:GetService("StarterGui"):SetCore("SendNotification",{
-            Title = "Exunys Developer";
+            Title =Error";
             Text = "Tracer script has errored while loading, please check the developer console! (F9)";
             Duration = 5;
         })
