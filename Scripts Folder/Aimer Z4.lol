@@ -7,7 +7,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Duration = 5
 })
 -- Esp
-loadstring(game:HttpGet("https://pastebin.com/raw/s7viVmDR"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/TracerBox.lol"))()
 local FillColor = Color3.fromRGB(175,25,255)
 local DepthMode = "AlwaysOnTop"
 local FillTransparency = 0.5
@@ -63,5 +63,3 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVer
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Crosshair.lua"))()
 -- aimbot
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Aimer_aimbot.lua'))()
--- Tracer
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Tracer.lol'))()
