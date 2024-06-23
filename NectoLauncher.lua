@@ -1,5 +1,9 @@
 -- game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge") -- This is occurred when hub is down
-
+		msg = Instance.new("Message")
+		msg.Parent = game.Workspace
+		msg.Text = "NectoVerse| Loading NectoLauncher..."
+		wait(6)
+            msg:remove()
 
 -- Made By NectoVerse Development
 -- Launcher Link: loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
