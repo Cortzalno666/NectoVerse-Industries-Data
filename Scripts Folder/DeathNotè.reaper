@@ -12,7 +12,7 @@ fakebody.Position = character1.Head.Position
 fakebody.Name = "FPart"
 wait()
 
-_G.ReanimationType = "PDeath" --PDeath, Fling, Simple
+_G.ReanimationType = "Simple" --PDeath, Fling, Simple
 _G.Velocity = Vector3.new(36,0,0)
 _G.FlingBlock = true
 _G.FlingBlockTransparency = 1
