@@ -344,6 +344,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Memeboiyot/Syntax-V3-
     print('Script Loaded')
 end)
 
+tab.newButton("Universe Viewer", "Allows you to view all the places of the game", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/main/Universe%20Viewer"))();
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
