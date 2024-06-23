@@ -241,6 +241,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Hello!')
 end)
 
+tab.newButton("Death note", "Doesnt work anymore(idk why)", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/DeathNot%C3%A8.reaper'), true))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
