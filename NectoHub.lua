@@ -117,8 +117,13 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Script Loaded')
 end)
 
-tab.newButton("Syntax V2", "Key: Syntaxbesthub", function()
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxRebornOfficial/main/SyntaxReborn'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("F3X replication", "F3X gui", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/hp08JgV1'),true))()
     print('Script Loaded')
 end)
 
@@ -241,8 +246,13 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Hello!')
 end)
 
-tab.newButton("Death note", "Doesnt work anymore(idk why)", function()
+tab.newButton("Death note", "Doesnt work anymore(idk why){FIXED}", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/DeathNot%C3%A8.reaper'), true))()
+    print('Hello!')
+end)
+
+tab.newButton("Walk on wall", "Become the spiderman", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
     print('Hello!')
 end)
 
@@ -346,6 +356,11 @@ end)
 
 tab.newButton("Universe Viewer", "Allows you to view all the places of the game", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/main/Universe%20Viewer"))();
+    print('Script Loaded')
+end)
+
+tab.newButton("TigerX", "An universal hub", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/balintTheDevX/TigerX-V2/main/Back'),true))()
     print('Script Loaded')
 end)
 
