@@ -160,7 +160,6 @@ loadstring(game:HttpGet("https://pastebin.com/raw/saMtiek2",true))()
     print('Loaded Gui')
 end)
 
-
 tab.newButton("Fe kill all", "Kill all script everyone can see", function()
 loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\65\99\117\114\97\88\48\52\57\47\111\98\102\117\115\99\97\116\101\100\83\99\114\105\112\116\115\47\109\97\105\110\47\75\105\108\108\71\117\105\34\41\41\40\41\10")()
     print('Starting')
@@ -258,6 +257,11 @@ end)
 
 tab.newButton("Walk on wall", "Become the spiderman", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+    print('Hello!')
+end)
+
+tab.newButton("Mobile Rspy", "Remote spy/SimpleSpy", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RS/main/SimpleSpyMobile"))()
     print('Hello!')
 end)
 
@@ -366,6 +370,19 @@ end)
 
 tab.newButton("TigerX", "An universal hub", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/balintTheDevX/TigerX-V2/main/Back'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Hydroxide", "Spies", function()
+local owner = "Upbolt"
+local branch = "revision"
+
+local function webImport(file)
+    return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+end
+
+webImport("init")
+webImport("ui/main")
     print('Script Loaded')
 end)
 
