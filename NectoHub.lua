@@ -117,13 +117,18 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Script Loaded')
 end)
 
-
+tab.newButton("Syntax V2", "Key: Syntaxbesthub", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxRebornOfficial/main/SyntaxReborn'),true))()
     print('Script Loaded')
 end)
 
 tab.newButton("F3X replication", "F3X gui", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/hp08JgV1'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Krone", "works on almost every game", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Krone.lol"))()
     print('Script Loaded')
 end)
 
