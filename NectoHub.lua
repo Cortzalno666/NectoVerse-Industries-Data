@@ -122,6 +122,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Memeboiyot/SyntaxReb
     print('Script Loaded')
 end)
 
+tab.newButton("Timestop gui", "Become dio", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/djAd7g2W'))()
+    print('Script Loaded')
+end)
+
 tab.newButton("F3X replication", "F3X gui", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/hp08JgV1'),true))()
     print('Script Loaded')
@@ -408,6 +413,11 @@ end)
 
 tab.newButton("Krnl", "Cracked source", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Knrl.lua"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Za warudo", "Press F to timestop(use mobile keyboard script if mobile)", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Za.warudo'))()
     print('Script Loaded')
 end)
 
