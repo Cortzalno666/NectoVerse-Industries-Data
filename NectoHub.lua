@@ -290,6 +290,11 @@ loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
     print('Hello!')
 end)
 
+tab.newButton("Nullware Hub", "?", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
@@ -419,6 +424,19 @@ end)
 tab.newButton("Za warudo", "Press F to timestop(use mobile keyboard script if mobile)", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Za.warudo'))()
     print('Script Loaded')
+end)
+
+tab.newButton("Free boombox", "ez", function()
+_G.boomboxb = game:GetObjects('rbxassetid://740618400')[1]
+_G.boomboxb.Parent = game:GetService'Players'.LocalPlayer.Backpack
+loadstring(_G.boomboxb.Client.Source)() 
+loadstring(_G.boomboxb.Server.Source)() --the original scripts made by roblox with minor changes
+Ð˜Ð»Ð¸
+_G.boomboxb = game:GetObjects('rbxassetid://740618400')[1]
+_G.boomboxb.Parent = game:GetService'Players'.LocalPlayer.Backpack
+loadstring(_G.boomboxb.Client.Source)() 
+loadstring(_G.boomboxb.Server.Source)() --the original scripts made by roblox with minor changes.
+    print('Hello!')
 end)
 
 -- NectoVerse Creations
