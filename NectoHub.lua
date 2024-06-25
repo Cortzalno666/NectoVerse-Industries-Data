@@ -396,6 +396,11 @@ webImport("ui/main")
     print('Script Loaded')
 end)
 
+tab.newButton("Krnl", "Cracked source", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Knrl.lua"))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
