@@ -280,6 +280,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main
     print('Hello!')
 end)
 
+tab.newButton("F3x", "finally found it!", function()
+loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
