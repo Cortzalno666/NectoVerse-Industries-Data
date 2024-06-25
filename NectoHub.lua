@@ -431,7 +431,6 @@ _G.boomboxb = game:GetObjects('rbxassetid://740618400')[1]
 _G.boomboxb.Parent = game:GetService'Players'.LocalPlayer.Backpack
 loadstring(_G.boomboxb.Client.Source)() 
 loadstring(_G.boomboxb.Server.Source)() --the original scripts made by roblox with minor changes
-Ð˜Ð»Ð¸
 _G.boomboxb = game:GetObjects('rbxassetid://740618400')[1]
 _G.boomboxb.Parent = game:GetService'Players'.LocalPlayer.Backpack
 loadstring(_G.boomboxb.Client.Source)() 
