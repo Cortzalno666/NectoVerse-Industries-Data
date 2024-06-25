@@ -270,6 +270,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RS/main/Simpl
     print('Hello!')
 end)
 
+tab.newButton("Krypton", "Cracked", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Krypton.lua"))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
