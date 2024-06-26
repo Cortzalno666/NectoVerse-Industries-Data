@@ -579,6 +579,12 @@ loadstring(game:HttpGet("https://pastefy.app/eAFsNQoe/raw",true))();
     print('Script Loaded')
 end)
 
+tab.newButton("Homerun gui", "homerun needed", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Homerun.slap'))()
+    print('Script Loaded')
+end)
+
+-- to section
 tab.newLabel("This section below  is place teleporter")
 
 tab.newButton("Brazil", "1", function()
