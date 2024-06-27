@@ -1,6 +1,5 @@
 -- Ghost
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Do%20you%20see%20me%3F.lua"))()
-wait(3)
 -- Bob farm
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Aquoupi/DestroyerX/main/UltraBobFarm.lua"))()
 -- Anti record
