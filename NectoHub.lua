@@ -584,6 +584,16 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Script Loaded')
 end)
 
+tab.newButton("Server Hop BobFarm(Check clipboard)", "Fast indeed(Put in auto exec)", function()
+setclipboard("loadstring(game:HttpGet("https://raw.githubusercontent.com/Aquoupi/DestroyerX/main/UltraBobFarm.lua"))()")
+    print('Script Loaded')
+end)
+
+tab.newButton("Underground bob farm", "Risky", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Risky%20bob%20farm.lua"))()
+    print('Script Loaded')
+end)
+
 -- to section
 tab.newLabel("This section below  is place teleporter")
 
