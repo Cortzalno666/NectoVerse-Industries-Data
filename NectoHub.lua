@@ -564,6 +564,11 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVe
     print('Script Loaded')
 end)
 
+tab.newButton("Original Sb hub", "?", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
+    print('Script Loaded')
+end)
+
 tab.newButton("Destroyer X", "?:)", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Aquoupi/DestroyerX/main/DestroyerX"))()
     print('Script Loaded')
