@@ -300,6 +300,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFES
     print('Hello!')
 end)
 
+tab.newButton("Prisonware v1.3", "The prison life script.", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
@@ -441,6 +446,11 @@ _G.boomboxb.Parent = game:GetService'Players'.LocalPlayer.Backpack
 loadstring(_G.boomboxb.Client.Source)() 
 loadstring(_G.boomboxb.Server.Source)() --the original scripts made by roblox with minor changes.
     print('Hello!')
+end)
+
+tab.newButton("Tiger admin", "Another PL script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dalloc2/Roblox/main/TigerAdmin.lua"))()
+    print('Script Loaded')
 end)
 
 -- NectoVerse Creations
