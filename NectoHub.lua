@@ -147,6 +147,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main
     print('Script Loaded')
 end)
 
+tab.newButton("Prison Life admin", "Best admin gui", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/main/Source/release_v0.8.1.lua'))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
