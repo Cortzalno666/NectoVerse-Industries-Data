@@ -152,6 +152,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/m
     print('Script Loaded')
 end)
 
+tab.newButton("Freecam", "This has some bugs", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/Freecam", true))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
