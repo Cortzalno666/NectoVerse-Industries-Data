@@ -310,6 +310,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/mast
     print('Hello!')
 end)
 
+tab.newButton("C C T V", "Spies are sus- Nil", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
