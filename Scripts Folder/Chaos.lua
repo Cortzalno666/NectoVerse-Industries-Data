@@ -14,7 +14,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/Free-Scrip
 print("HI")
 end)
 
-KillingCheats:CreateButton("Destroyer hub", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Chaos.lua"))()
+KillingCheats:CreateButton("Destrozer hub", function()
+-- Chaos - Caos
+-- CHAOS DESTROZER HUB
+-- JUANKO MODS YT 
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/main/Chaos%20Destrozer%20Hub"))()
 print("HI")
 end)
