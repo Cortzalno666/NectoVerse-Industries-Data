@@ -13,3 +13,8 @@ KillingCheats:CreateButton("Kill aura", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptfree/Free-Scripts/main/chaos", true))()
 print("HI")
 end)
+
+KillingCheats:CreateButton("Destroyer hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Chaos.lua"))()
+print("HI")
+end)
