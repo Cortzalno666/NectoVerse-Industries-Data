@@ -463,6 +463,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/dalloc2/Roblox/main/T
     print('Script Loaded')
 end)
 
+tab.newButton("Lightux", "LightUx ESP", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/cool83birdcarfly02six/UNIVERSALESPLTX/main/README.md'),true))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
