@@ -14,7 +14,7 @@ end)
 
 KillingCheats:CreateButton("Execute", function()
     local function n()
-    local success, errorMsg = pcall(function()
+    local success, errorMsg = pcall function()
         loadstring(tb.Text)()
     end
 print("HI")
