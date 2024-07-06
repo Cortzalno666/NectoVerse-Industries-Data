@@ -157,6 +157,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/Freecam
     print('Script Loaded')
 end)
 
+tab.newButton("mm2", "Watch yourself, peasant", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zxclua/m/main/script"))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
@@ -312,6 +317,11 @@ end)
 
 tab.newButton("C C T V", "Spies are sus- Nil", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
+    print('Hello!')
+end)
+
+tab.newButton("Ghosthub", "[DESC_TYPE:NILL;]", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
     print('Hello!')
 end)
 
