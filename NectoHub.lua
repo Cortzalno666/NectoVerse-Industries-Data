@@ -556,6 +556,12 @@ tab.newButton("Genesis.FE loader", "The loader of every genesis fe scripts", fun
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Genesis%20FE.loader"))()
     print('Script Loaded')
 end)
+
+tab.newButton("Chaos Script", "This script is for a game called CHAOS itself (Might get patched)", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Chaos.lua"))()
+    print('Script Loaded')
+end)
+
 -- Slap battles tab
 local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
 
