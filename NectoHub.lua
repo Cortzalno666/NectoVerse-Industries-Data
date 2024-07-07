@@ -162,6 +162,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/zxclua/m/main/script"
     print('Script Loaded')
 end)
 
+tab.newButton("ECCS V2.3", "Great emperor or script searchers.", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/main/ECCS%20Searcher%20V2.3"))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
@@ -475,6 +480,11 @@ end)
 
 tab.newButton("Lightux", "LightUx ESP", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/cool83birdcarfly02six/UNIVERSALESPLTX/main/README.md'),true))()
+    print('Script Loaded')
+end)
+
+tab.newButton("ECCS V3", "Stylish script searcher", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/main/ECCS%20V3.lua"))()
     print('Script Loaded')
 end)
 
