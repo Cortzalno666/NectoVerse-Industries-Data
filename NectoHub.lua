@@ -572,6 +572,16 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Script Loaded')
 end)
 
+tab.newButton("Free gamepass", "?", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Gamepass.giver.lua"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Nexec Exploit", "</>N.E.E", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Nexec.Exploit"))()
+    print('Script Loaded')
+end)
+
 -- Slap battles tab
 local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
 
