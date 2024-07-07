@@ -592,6 +592,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVer
     print('Script Loaded')
 end)
 
+tab.newButton("FPS booster", "Universal FPS booster, tho it's notthath useful but worth a try", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/FPS%20booster.lua"))()
+    print('Script Loaded')
+end)
+
 -- Slap battles tab
 local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
 
