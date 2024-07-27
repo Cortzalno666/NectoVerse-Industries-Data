@@ -5,12 +5,15 @@
 		wait(6)
          msg:remove()
 -- Loaded SCRIPT!
+-- We dont own any of the scripts from Exclusives 1, exclusives 2, Exclusives 3 and slap battles tab aswell some scripts from NVD creations tab
 -- Lib = DrRay
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 local window = DrRayLibrary:Load("NectoHUB V5", "Default")
 
 -- Exclusive 1 For some scripts only
 local tab = DrRayLibrary.newTab("ExclusiveS 1", "ImageIdHere")
+
+tab.newLabel("Credits to the owners of all the scripts in this tab")
 
 tab.newButton("Blox Fruits Auto farm", "Auto farm race v4/mirage", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chibacomebackbeta.txt'))()
@@ -169,6 +172,8 @@ end)
 
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
+
+tab.newLabel("Credits to the owners of all the scripts in this tab")
 
 tab.newButton("ThunderZ Hub", "Aimbot script Blox fruits", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-HUB/HUB/main/Aimbot"))()
@@ -333,6 +338,8 @@ end)
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
+tab.newLabel("Credits to the owners of all the scripts in this tab")
+
 tab.newButton("Fake Donation [CC]", "Client Sided Script For plz donate", function()
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/o5u3/PLS-Donate/main/Fake-Donate.lua")))()
     print('Gui Loaded!')
@@ -491,6 +498,8 @@ end)
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
+tab.newLabel("Some scripts are not made by us and we dont own them.")
+
 tab.newButton("NectoFlinger GUI", "A Official product by NectoVerse Team.", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/NectoFlinger-Gui.lua'),true))() 
     print('Script Loaded')
@@ -599,6 +608,8 @@ end)
 
 -- Slap battles tab
 local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
+
+tab.newLabel("Credits to the owners of all the scripts in this tab")
 
 tab.newButton("Spawn Cloud", "Spawn a cloud with any glove.", function()
 game.ReplicatedStorage.CloudAbility:FireServer()
