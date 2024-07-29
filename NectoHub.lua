@@ -611,6 +611,11 @@ local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
 
 tab.newLabel("Credits to the owners of all the scripts in this tab")
 
+tab.newButton("Glove Abuser2.4", "Spawn a cloud with any glove.", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Donjosx/SBS/main/Gloves_Abuser%25by%25OMOSCRIPTS.lua"))();
+    print('Script Loaded')
+end)
+
 tab.newButton("Spawn Cloud", "Spawn a cloud with any glove.", function()
 game.ReplicatedStorage.CloudAbility:FireServer()
     print('Script Loaded')
@@ -806,6 +811,11 @@ end)
 
 tab.newButton("?", "26", function()
     game:GetService("TeleportService"):Teleport(11828384869) --? |26
+    print('Hello!')
+end)
+
+tab.newButton("where guide resides", "27", function()
+    game:GetService("TeleportService"):Teleport(18550498098) --where guide resides |27
     print('Hello!')
 end)
 
