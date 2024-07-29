@@ -143,6 +143,16 @@ KillingCheats:CreateButton("?", function()
 print("HI")
 end)
 
+KillingCheats:CreateButton("Where Guide Resides", function()
+    game:GetService("TeleportService"):Teleport(18550498098)
+print("HI")
+end)
+
+KillingCheats:CreateButton("knnyism's Place: 07282024_1", function()
+    game:GetService("TeleportService"):Teleport(18698003301)
+print("HI")
+end)
+
 local KillingCheats = PhantomForcesWindow:NewSection("Extras")
 
 KillingCheats:CreateButton("SB hub updated", function()
