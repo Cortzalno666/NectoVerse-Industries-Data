@@ -611,7 +611,12 @@ local tab = DrRayLibrary.newTab("Slap battles", "ImageIdHere")
 
 tab.newLabel("Credits to the owners of all the scripts in this tab")
 
-tab.newButton("Glove Abuser2.4", "Spawn a cloud with any glove.", function()
+tab.newButton("BetterAvatar/Avatar abuser", "credits to dojosx", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/BetterAvatar.lua"))();
+    print('Script Loaded')
+end)
+
+tab.newButton("Glove Abuser2.4", "Credits to Donjosx", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Donjosx/SBS/main/Gloves_Abuser%25by%25OMOSCRIPTS.lua"))();
     print('Script Loaded')
 end)
