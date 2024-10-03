@@ -2,7 +2,7 @@
         msg = Instance.new("Message")
 		msg.Parent = game.Workspace
 		msg.Text = "NectoVerse| Loading NectoHub..."
-		wait(6)
+		wait(9)
          msg:remove()
 -- Loaded SCRIPT!
 -- We dont own any of the scripts from Exclusives 1, exclusives 2, Exclusives 3 and slap battles tab aswell some scripts from NVD creations tab
@@ -683,6 +683,11 @@ end)
 
 tab.newButton("Underground bob farm", "Risky", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Risky%20bob%20farm.lua"))()
+    print('Script Loaded')
+end)
+
+tab.newButton("Materialize", "By nexer, use this when jet/phase orb spawn.", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/materialize/main/main.lua'))()
     print('Script Loaded')
 end)
 
