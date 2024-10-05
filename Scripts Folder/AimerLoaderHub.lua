@@ -1,6 +1,6 @@
 library = loadstring(game:HttpGet('https://raw.githubusercontent.com/EngineLibraryX/StracLib/refs/heads/main/StracLib.lua'))()
 
-local Main_ = libary:CreateMain()
+local Main_ = libary:CreateMain("Aimer Loader Hub")
 
 Main_:CreateButton("Aimer X1", "Load the first ever aimer!", "", "", "", "", function()
   loadstring(game:HttpGet('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/Scripts%20Folder/Aimer_loader.lua'))()
