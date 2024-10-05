@@ -4,7 +4,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 
 libary = {}
-function libary:CreateMain()
+function libary:CreateMain(text)
 	local StracLib = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local Top = Instance.new("Folder")
@@ -90,7 +90,7 @@ function libary:CreateMain()
 	Title.Position = UDim2.new(0.0474683568, 0, 0.0157068074, 0)
 	Title.Size = UDim2.new(0, 119, 0, 34)
 	Title.Font = Enum.Font.SourceSans
-	Title.Text = "Aimer Hub"
+	Title.Text = ""
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextScaled = true
 	Title.TextSize = 14.000
