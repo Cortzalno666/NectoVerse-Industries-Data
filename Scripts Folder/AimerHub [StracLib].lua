@@ -3,7 +3,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Text = "Made By NectoVerse Development", -- Required
 })
 
-libary = {}
+Local StracLib = {}
 function libary:CreateMain()
 	local Aimer = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
