@@ -3,7 +3,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Text = "Made Using StracLib", -- Required
 })
 
-libary = {}
+Local libary = {}
 function libary:CreateMain(text)
 	local StracLib = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
