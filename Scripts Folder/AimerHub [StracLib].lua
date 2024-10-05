@@ -1,11 +1,11 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Welcome", -- Required
-	Text = "Made By NectoVerse Development", -- Required
+	Text = "Made Using StracLib", -- Required
 })
 
 libary = {}
 function libary:CreateMain()
-	local Aimer = Instance.new("ScreenGui")
+	local StracLib = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local Top = Instance.new("Folder")
 	local Title = Instance.new("TextLabel")
@@ -23,7 +23,7 @@ function libary:CreateMain()
 	local UICorner_4 = Instance.new("UICorner")
 	local TextAnimationFrame_2 = Instance.new("Frame")
 	local TextLabel_3 = Instance.new("TextLabel")
-	local close = Instance.new("ImageLabel
+	local close = Instance.new("ImageLabel")
 	local TextLabel_4 = Instance.new("TextLabel")
 	local ControlBar = Instance.new("Frame")
 	local UICorner_5 = Instance.new("UICorner")
@@ -69,13 +69,13 @@ function libary:CreateMain()
 	UiStroke_2.Color = Color3.fromRGB(66, 69, 73)
 	UiStroke_2.Thickness = 2
 
-	Aimer.Name = "Aimer"
-	Aimer.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	Aimer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	Aimer.ResetOnSpawn = false
+	StracLib.Name = "StracLib"
+	StracLib.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	StracLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	StracLib.ResetOnSpawn = false
 
 	Main.Name = "Main"
-	Main.Parent = Aimer
+	Main.Parent = StracLib
 	Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	Main.Position = UDim2.new(0.370458126, 0, 0.174708813, 0)
 	Main.Size = UDim2.new(0, 319, 0, 389)
@@ -132,7 +132,7 @@ function libary:CreateMain()
 	Credits.Position = UDim2.new(0.022, 0, 0.835390925, 0)
 	Credits.Size = UDim2.new(0, 118, 0, 40)
 	Credits.Font = Enum.Font.SourceSans
-	Credits.Text = "Made By NectoVerse Development | UI Lib: StracLib"
+	Credits.Text = "Made By NectoVerse Development"
 	Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Credits.TextScaled = true
 	Credits.TextSize = 14.000
@@ -213,7 +213,7 @@ function libary:CreateMain()
 	TextLabel_3.Position = UDim2.new(0, 0, 1, 0)
 	TextLabel_3.Size = UDim2.new(0, 46, 0, 20)
 	TextLabel_3.Font = Enum.Font.SourceSans
-	TextLabel_3.Text = "KILL HUB"
+	TextLabel_3.Text = "KILL [Doesnt work]"
 	TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel_3.TextScaled = true
 	TextLabel_3.TextSize = 14.000
@@ -237,7 +237,7 @@ function libary:CreateMain()
 	TextLabel_4.Position = UDim2.new(0.538745403, 0, 0.837613344, 0)
 	TextLabel_4.Size = UDim2.new(0, 118, 0, 40)
 	TextLabel_4.Font = Enum.Font.SourceSans
-	TextLabel_4.Text = "More stuff comming soon!"
+	TextLabel_4.Text = "?"
 	TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabel_4.TextScaled = true
 	TextLabel_4.TextSize = 14.000
@@ -327,7 +327,7 @@ function libary:CreateMain()
 	UICorner_9.Parent = Main
 
 	Hats.Name = "Hats"
-	Hats.Parent = Aimer
+	Hats.Parent = UtgV4
 	Hats.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	Hats.Position = UDim2.new(0.0165876783, 0, 0.540765405, 0)
 	Hats.Size = UDim2.new(0, 247, 0, 257)
