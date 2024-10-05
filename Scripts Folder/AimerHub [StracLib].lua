@@ -4,7 +4,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 
 Local StracLib = {}
-function libary:CreateMain()
+function StracLib:CreateMain()
 	local Aimer = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local Top = Instance.new("Folder")
