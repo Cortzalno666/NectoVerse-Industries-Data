@@ -90,7 +90,7 @@ function libary:CreateMain(text)
 	Title.Position = UDim2.new(0.0474683568, 0, 0.0157068074, 0)
 	Title.Size = UDim2.new(0, 119, 0, 34)
 	Title.Font = Enum.Font.SourceSans
-	Title.Text = ""
+	Title.Text = text
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextScaled = true
 	Title.TextSize = 14.000
