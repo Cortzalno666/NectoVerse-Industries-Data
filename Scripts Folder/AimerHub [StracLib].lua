@@ -3,8 +3,8 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Text = "Made By NectoVerse Development", -- Required
 })
 
-Local StracLib = {}
-function StracLib:CreateMain()
+Library = {}
+function Library:CreateMain()
 	local Aimer = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local Top = Instance.new("Folder")
@@ -23,7 +23,7 @@ function StracLib:CreateMain()
 	local UICorner_4 = Instance.new("UICorner")
 	local TextAnimationFrame_2 = Instance.new("Frame")
 	local TextLabel_3 = Instance.new("TextLabel")
-	local close = Instance.new("ImageLabel")
+	local close = Instance.new("ImageLabel
 	local TextLabel_4 = Instance.new("TextLabel")
 	local ControlBar = Instance.new("Frame")
 	local UICorner_5 = Instance.new("UICorner")
