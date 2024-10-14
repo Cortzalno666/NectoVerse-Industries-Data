@@ -12,7 +12,7 @@ frame.Parent = screenGui
 local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, 0, 0, 20)
 title.Position = UDim2.new(0, 0, 0, -20)
-title.Text = "Necto Key System"
+title.Text = "NectoKey System"
 title.TextColor3 = Color3.new(1, 1, 1)
 title.BackgroundColor3 = Color3.new(0, 0, 0)
 title.Parent = frame
@@ -101,14 +101,14 @@ screenGui:Destroy()
 -- game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge") -- This is occurred when hub is down
         msg = Instance.new("Message")
 		msg.Parent = game.Workspace
-		msg.Text = "NectoVerse| Loading NectoHub..."
+		msg.Text = "Loading Hub Assets..."
 		wait(9)
          msg:remove()
 -- Loaded SCRIPT!
 -- We dont own any of the scripts from Exclusives 1, exclusives 2, Exclusives 3 and slap battles tab aswell some scripts from NVD creations tab
 -- Lib = DrRay
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
-local window = DrRayLibrary:Load("NectoHUB V5", "Default")
+local window = DrRayLibrary:Load("NectoHub", "Default")
 
 -- Exclusive 1 For some scripts only
 local tab = DrRayLibrary.newTab("ExclusiveS 1", "ImageIdHere")
