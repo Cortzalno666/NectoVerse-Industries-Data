@@ -495,6 +495,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/main/E
     print('Script Loaded')
 end)
 
+tab.newButton("Apophenia", "An SBG moveset script, many people  love it and you surely will love it too.", function()
+getgenv().Music = false
+--Setting this to false usually fixes most executors
+--also it helps load time a little bit
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/main/APOPHENIA.lua"))()
+    print('Script Loaded')
+end)
+
 -- NectoVerse Creations
 local tab = DrRayLibrary.newTab("NV Creations", "ImageIdHere")
 
