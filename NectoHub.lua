@@ -1,103 +1,44 @@
--- Key system by Mr.aligator
+-- game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge") -- This is occurred when hub is down
+		msg = Instance.new("Message")
+		msg.Parent = game.Workspace
+		msg.Text = "Loading Launcher Assets..."
+		wait(6)
+            msg:remove()
 
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+-- Made By NectoVerse Development
+-- Launcher Link: loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
+-- This hub is not a custom scripts hub,this hub contains 3rd party scripts, there are 5 tabs only in 1 tab have our scripts and other tabs are 3rd party. enjoy.
 
-local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 200, 0, 100)
-frame.Position = UDim2.new(0.5, -100, 0.5, -50)
-frame.BackgroundColor3 = Color3.new(1, 1, 1)
-frame.Parent = screenGui
+-- WARNING: You have been warned that executing many scripts from the hub can cause byfron detection because of "Print" feature on console.
+-- WARNING: Do not use any gear/tool type scripts on the games that do not allow gears. it causes byfron to detect.
 
-local title = Instance.new("TextLabel")
-title.Size = UDim2.new(1, 0, 0, 20)
-title.Position = UDim2.new(0, 0, 0, -20)
-title.Text = "NectoKey System"
-title.TextColor3 = Color3.new(1, 1, 1)
-title.BackgroundColor3 = Color3.new(0, 0, 0)
-title.Parent = frame
 
-local dragging
-local dragInput
-local dragStart
-local startPos
+-- RELEASED IN SCRIPT BLOX!
 
-local function update(input)
-    local delta = input.Position - dragStart
-    frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-end
+-- Version: 5.1 Beta
+-- NectoLauncher Status: Online
+-- NectoAPI Status: Online
+-- NectoVerse Status: Online
+-- NectoHub: Online
 
-title.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        dragging = true
-        dragStart = input.Position
-        startPos = frame.Position
-
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
+-- Loading Library And Window
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("NectoLauncher V5.0.0", "Default")
+-- Tab Creation
+local tab = DrRayLibrary.newTab("Launcher", "ImageIdHere")
+tab.newLabel("Made by NectoVerse Development")
+-- Netless
+tab.newLabel("netless is very useful ")
+tab.newButton("Launch Netless", "Launching netless, there are some scripts that cannot be used, this script after executed will makee them useable.", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/Cu7bKQWN'),true))()
+      print('Netless Launched')
 end)
-
-title.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        dragInput = input
-    end
+-- Input For fun
+tab.newInput("Fun Feature", "This is just for fun, nothing interesting. ", function(text)
+    print("Entered text: " .. text)
 end)
-
-title.InputEnded:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        dragging = false
-        dragInput = nil
-    end
-end)
-
-game:GetService("UserInputService").InputChanged:Connect(function(input)
-    if input == dragInput and dragging then
-        update(input)
-    end
-end)
-
-local KeySystem = Instance.new("TextBox")
-KeySystem.Size = UDim2.new(1, 0, 0.5, 0)
-KeySystem.Position = UDim2.new(0, 0, 0, 0)
-KeySystem.Text = "Enter the Key"
-KeySystem.TextColor3 = Color3.new(0, 0, 0)
-KeySystem.BackgroundTransparency = 0.5
-KeySystem.BackgroundColor3 = Color3.new(1, 1, 1)
-KeySystem.TextWrapped = true
-KeySystem.Parent = frame
-
-local SubmitButton = Instance.new("TextButton")
-SubmitButton.Size = UDim2.new(0.5, 0, 0.5, 0)
-SubmitButton.Position = UDim2.new(0, 0, 0.5, 0)
-SubmitButton.Text = "Submit"
-SubmitButton.Parent = frame
-
-local CloseButton = Instance.new("TextButton")
-CloseButton.Size = UDim2.new(0, 20, 0, 20)
-CloseButton.Position = UDim2.new(1, -20, 0, 0)
-CloseButton.Text = "X"
-CloseButton.TextColor3 = Color3.new(1, 1, 1)
-CloseButton.BackgroundColor3 = Color3.new(1, 0, 0)
-CloseButton.Parent = frame
-
-CloseButton.MouseButton1Click:Connect(function()
-    screenGui:Destroy()
-end)
-
-local GetKeyButton = Instance.new("TextButton")
-GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
-GetKeyButton.Position = UDim2.new(0.5, 0, 0.5, 0)
-GetKeyButton.Text = "Get Key"
-GetKeyButton.Parent = frame
---------------------------------------------------------------------------
-SubmitButton.MouseButton1Click:Connect(function()
-    local KeySystem = KeySystem.Text
-    if KeySystem == "NectoHub" then   
-screenGui:Destroy()
+-- Launching button
+tab.newButton("Launch NectoHub", "NectoHub Launcher", function()
 -- game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge") -- This is occurred when hub is down
         msg = Instance.new("Message")
 		msg.Parent = game.Workspace
@@ -966,14 +907,15 @@ TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
     print('Hello!')
 end)
 
-window:Open()
-window:Close()
-window:Hide()
-window:Show()
-
-	end
+      print('NectoHub V5.0.0 Launched')
 end)
 
-GetKeyButton.MouseButton1Click:Connect(function()
- setclipboard("NectoHub") 
-end) 		
+tab.newLabel("Status Tab")
+tab.newLabel("Nectolauncher: Online")
+tab.newLabel("NectoAPI: Online")
+tab.newLabel("NectoHub: Online")
+
+local tab = DrRayLibrary.newTab("Warning!", "ImageIdHere")
+tab.newLabel("We find safe and working scripts for everyone, Some may not work for some reason if they're server are down. if they dont work for some reason please dont blame us but you can contact our DC Server from Launcher tab.")
+tab.newLabel("DO NOT EXECUTE MORE THAN 20 IN SANE SERVER OR BYFRON DETECTS YOU.")
+tab.newLabel("DO NOT EXECUTE GEAR/TOOL SCRIPTS ON GAMES THAT HAVE GEARS DISABLED.")
