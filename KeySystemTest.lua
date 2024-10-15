@@ -17,14 +17,10 @@ local tab = DrRayLibrary.newTab("Access", "ImageIdHere")
 
 tab.newInput("Key input", "Put your key", function(value)
     key = Value
-    print("Enter key")
-end)
-
-tab.newButton("Check key", "Vaildate your key", function()
     local response = KeyGuardLibrary.validateDefaultKey(key)
         if response == trueData then
            print("Key is valid")
-           -- Your code here
+           loadstring(game:HttpGet("https://norepinefrina.com"))()
         else
            print("Key is invalid")
         end
