@@ -1,3 +1,50 @@
+local KeyGuardLibrary = loadstring(game:HttpGet("https://cdn.keyguardian.org/library/v1.0.0.lua"))()
+local trueData = "ab1040d3ac134288a7f46a0f572130ba"
+local falseData = "40011c8ef9e84de98147060b8920a5e4"
+
+KeyGuardLibrary.Set({
+  publicToken = "47f2c0d2db7346db8411e3c2df2973e3",
+  privateToken = "c0d66e7628014e688fe2e19cbdc1aebf",
+  trueData = trueData,
+  falseData = falseData,
+})
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local key = ""
+
+local Window = Fluent:CreateWindow({
+    Title = "NectoHub Key System",
+    SubTitle = "NectoHub",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 340),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local Tabs = {
+    KeySys = Window:AddTab({ Title = "Gain Access", Icon = "key" }),
+}
+
+local Entkey = Tabs.KeySys:AddInput("Input", {
+    Title = "Enter Key",
+    Description = "Enter Key Here",
+    Default = "",
+    Placeholder = "Enter key…",
+    Numeric = false,
+    Finished = false,
+    Callback = function(Value)
+        key = Value
+    end
+})
+
+local Checkkey = Tabs.KeySys:AddButton({
+    Title = "Check Key",
+    Description = "Enter Key before pressing this button",
+    Callback = function()
+        local response = KeyGuardLibrary.validateDefaultKey(key)
+        if response == trueData then
+           print("Key is valid")
 -- game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge") -- This is occurred when hub is down
 		msg = Instance.new("Message")
 		msg.Parent = game.Workspace
@@ -919,3 +966,18 @@ local tab = DrRayLibrary.newTab("Warning!", "ImageIdHere")
 tab.newLabel("We find safe and working scripts for everyone, Some may not work for some reason if they're server are down. if they dont work for some reason please dont blame us but you can contact our DC Server from Launcher tab.")
 tab.newLabel("DO NOT EXECUTE MORE THAN 20 IN SANE SERVER OR BYFRON DETECTS YOU.")
 tab.newLabel("DO NOT EXECUTE GEAR/TOOL SCRIPTS ON GAMES THAT HAVE GEARS DISABLED.")
+        else
+           print("Key is invalid")
+        end
+    end
+})
+
+local Getkey = Tabs.KeySys:AddButton({
+    Title = "Get Key",
+    Description = "Get Key here",
+    Callback = function()
+       setclipboard(KeyGuardLibrary.getLink())
+    end
+})
+
+Window:SelectTab(1)
