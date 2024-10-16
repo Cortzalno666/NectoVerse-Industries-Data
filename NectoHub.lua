@@ -1,3 +1,8 @@
+-- Keyguardian Key system
+-- FFA SRC Script hub
+-- feel free to contribute to this project
+-- Brought by NectoVerse with love <3
+
 local KeyGuardLibrary = loadstring(game:HttpGet("https://cdn.keyguardian.org/library/v1.0.0.lua"))()
 local trueData = "ab1040d3ac134288a7f46a0f572130ba"
 local falseData = "40011c8ef9e84de98147060b8920a5e4"
