@@ -16,15 +16,15 @@ setclipboard("https://discord.gg/aPevmdnnge")
 local players = game:GetService("Players")
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Welcome!";
-    Text = "Made by NectoHub, Discord invite link copied."
-    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Text = "Made by NectoHub, Discord invite link copied.";
+    Icon = "";
     Duration = 5
 })
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Join discord server";
-    Text = "Check your clipboard for our invite link! or .gg/aPevmdnnge"
-    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Text = "Check your clipboard for our invite link! or .gg/aPevmdnnge";
+    Icon = "rbxthumb://type=AvatarHeadShot&id=";
     Duration = 5
 })
 
