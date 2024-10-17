@@ -216,6 +216,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/main/E
     print('Script Loaded')
 end)
 
+tab.newButton("Quiz Bot", "Great....", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Damian-11/quizbot/master/quizbot.luau'))()
+    print('Script Loaded')
+end)
+
 -- Exclusive Tab number 2 for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 2", "ImageIdHere")
 
@@ -386,6 +391,11 @@ loadstring(game:HttpGet("https://norepinefrina.com"))()
     print('Hello!')
 end)
 
+tab.newButton("Chatbot Hub", "One of the greatest", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
+    print('Hello!')
+end)
+		
 -- Exclusives Number 3 tab for some scripts
 local tab = DrRayLibrary.newTab("ExclusiveS 3", "ImageIdHere")
 
