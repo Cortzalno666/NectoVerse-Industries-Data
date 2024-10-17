@@ -3,12 +3,30 @@
 -- feel free to contribute to this project
 -- Brought by NectoVerse with love <3
 
+
+setclipboard("https://discord.gg/aPevmdnnge")
+
 -- game.Players.LocalPlayer:Kick("Error 09: Hub down| Join our discord for Script status: .gg/aPevmdnnge") -- This is occurred when hub is down
 		msg = Instance.new("Message")
 		msg.Parent = game.Workspace
 		msg.Text = "Loading Launcher Assets..."
 		wait(6)
             msg:remove()
+
+local players = game:GetService("Players")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Welcome!";
+    Text = "Made by NectoHub, Discord invite link copied."
+    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Duration = 5
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Join discord server";
+    Text = "Check your clipboard for our invite link! or .gg/aPevmdnnge"
+    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
+    Duration = 5
+})
 
 -- Made By NectoVerse Development
 -- Launcher Link: loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cortzalno666/NectoVerse-Industries-Data/master/NectoLauncher.lua'),true))()
@@ -36,6 +54,11 @@ tab.newLabel("Made by NectoVerse Development")
 tab.newLabel("netless is very useful ")
 tab.newButton("Launch Netless", "Launching netless, there are some scripts that cannot be used, this script after executed will makee them useable.", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/Cu7bKQWN'),true))()
+      print('Netless Launched')
+end)
+-- Get discord server invite
+tab.newButton("Discord Invite", "get Official discord server link", function()
+setclipboard("https://discord.gg/aPevmdnnge")
       print('Netless Launched')
 end)
 -- Input For fun
