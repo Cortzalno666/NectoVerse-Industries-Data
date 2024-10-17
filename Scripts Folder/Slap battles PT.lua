@@ -153,6 +153,16 @@ KillingCheats:CreateButton("knnyism's Place: 07282024_1", function()
 print("HI")
 end)
 
+KillingCheats:CreateButton("Binded maze", function()
+    game:GetService("TeleportService"):Teleport(74169485398268)
+print("HI")
+end)
+
+KillingCheats:CreateButton("Dev_crow's Place: 10102024_2", function()
+    game:GetService("TeleportService"):Teleport(89837553336708)
+print("HI")
+end)
+
 local KillingCheats = PhantomForcesWindow:NewSection("Extras")
 
 KillingCheats:CreateButton("SB hub updated", function()
