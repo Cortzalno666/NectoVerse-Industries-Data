@@ -20,6 +20,13 @@ Tab:Button{
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/AK-47"))()
  end
 }
+Tab:Button{
+	Name = "Minigun",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Minigun"))()
+ end
+}
 	Tab:Button{
 	Name = "Goner",
 	Description = nil,
@@ -145,5 +152,13 @@ Tab:Button{
 	Description = nil,
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"))()
+ end
+}
+
+Tab:Button{
+	Name = "Puppet Master",
+	Description = nil,
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Puppet%20Master"))()
  end
 }
