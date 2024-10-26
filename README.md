@@ -1,7 +1,7 @@
 # NectoVerse-Industries--Data
 
 ```
-loadstring(game:HttpGet('https://enginelibraryx.github.io/AutoExec/'))()
+loadstring(game:HttpGet('https://nectoverse.github.io/AutoExec/'))()
 ```
 
 - Launcher Data For NectoVerse Products In future.
