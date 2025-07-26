@@ -1,3 +1,9 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Loaded FIS", -- Required
+	Text = "The infinite stamina script has been loaded.", -- Required
+	Icon = "rbxassetid://1234567890" -- Optional
+})
+
 local Sprinting = game:GetService("ReplicatedStorage").Systems.Character.Game.Sprinting
 local stamina = require(Sprinting)
 stamina.MaxStamina = 100  -- Maximum stamina
