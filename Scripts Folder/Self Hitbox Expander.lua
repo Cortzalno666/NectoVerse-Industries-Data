@@ -2,8 +2,8 @@ local UserInputService = game:GetService("UserInputService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
-local transparencyValue = 1
-local increment = 1
+local transparencyValue = 0
+local increment = 0
 
 local function sendNotification(title, text)
     game.StarterGui:SetCore("SendNotification", {
