@@ -2,7 +2,7 @@ local UserInputService = game:GetService("UserInputService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
-local transparencyValue = 0.5
+local transparencyValue = 1
 local increment = 0.1
 
 local function sendNotification(title, text)
