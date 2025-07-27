@@ -14,3 +14,4 @@ loadstring(game:HttpGet('https://nectoverse.github.io/AutoExec/'))()
 
 # Credit footer
 > ©️Copyright 2024, NectoVerse | credits to the original authors of the scripts used on the hub.
+> Join official NectoVerse Development DC Server: https://discord.gg/NBYpjxRUZp
