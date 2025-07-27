@@ -206,7 +206,7 @@ local function createCustomGUI()
     title.Position = UDim2.new(0, 0, 0, 0)
     title.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
     title.BorderSizePixel = 0
-    title.Text = "Parts Expander"
+    title.Text = "Self Hitbox Expander"
     title.TextColor3 = Color3.fromRGB(255, 255, 255)
     title.Font = Enum.Font.Gotham
     title.TextSize = 14
@@ -217,7 +217,7 @@ local function createCustomGUI()
     button.Position = UDim2.new(0, 0, 0, 30)
     button.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
     button.BorderSizePixel = 0
-    button.Text = "Expand Parts"
+    button.Text = "Expand"
     button.TextColor3 = Color3.fromRGB(255, 255, 255)
     button.Font = Enum.Font.Gotham
     button.TextSize = 14
