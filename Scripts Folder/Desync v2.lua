@@ -1,27 +1,17 @@
--- [[ ULTIMATE PRECISION MIX - V5: NOTIFICATION EDITION ]] --
+-- [[ ULTIMATE PRECISION MIX - V11: WALL-LOCK EDITION ]] --
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local UIS = game:GetService("UserInputService")
 local Players = game:GetService("Players")
-local StarterGui = game:GetService("StarterGui")
 
 local lp = Players.LocalPlayer
 
 getgenv().PrecisionSettings = {
     ShieldActive = false,
     ChargeStart = 0,
-    FloorLimit = 3.2,
-    Trajectory = {X = 2.2, Y = 0.8, Z = 2.2}
+    Trajectory = {X = 2.2, Y = 0.8, Z = 2.2},
+    LatencyComp = 0.05
 }
-
--- Notification Helper
-local function Notify(title, text, duration)
-    StarterGui:SetCore("SendNotification", {
-        Title = title;
-        Text = text;
-        Duration = duration or 2;
-    })
-end
 
 -- 1. INTERNAL MODULE BYPASS
 local success, Timegate = pcall(function()
@@ -35,55 +25,64 @@ if success and Timegate then
     if setreadonly then setreadonly(Timegate, true) end
 end
 
--- 2. SMART GHOST BALL (Wall-Detection)
+-- 2. SMART GHOST & LATENCY CONTROLLER (V11)
 local function triggerGhostBall()
     task.spawn(function()
         local ball = workspace:FindFirstChild("Misc") and workspace.Misc:FindFirstChild("Football")
-        if not ball then return end
+        if not ball or not lp.Character then return end
+
         local endTime = tick() + 1.2
         local connection
         local rayParams = RaycastParams.new()
         rayParams.FilterType = Enum.RaycastFilterType.Exclude
         
         connection = RunService.Heartbeat:Connect(function()
+            -- Safety checks: If ball is gone or time is up, force SOLID and kill loop
             if not ball or not ball.Parent or tick() >= endTime then
                 if ball then ball.CanCollide = true end
-                connection:Disconnect()
+                if connection then connection:Disconnect() end
                 return
             end
 
-            if ball.Position.Y <= getgenv().PrecisionSettings.FloorLimit then
+            local root = lp.Character:FindFirstChild("HumanoidRootPart")
+            if not root then return end
+
+            -- 1. CATCH PRIORITY (4ms Feel)
+            -- If ball is near you, it MUST be solid to catch it.
+            local predictedPos = ball.Position + (ball.AssemblyLinearVelocity * getgenv().PrecisionSettings.LatencyComp)
+            if (predictedPos - root.Position).Magnitude < 9 then
                 ball.CanCollide = true
                 return
             end
 
+            -- 2. WALL SAFETY (Whitelist Logic)
+            -- We default to CanCollide = true. We ONLY ghost if we hit a player.
             rayParams.FilterDescendantsInstances = {ball, lp.Character}
-            local cast = workspace:Raycast(ball.Position, ball.AssemblyLinearVelocity.Unit * 3, rayParams)
+            local velocity = ball.AssemblyLinearVelocity
+            -- Look ahead 7 studs (Longer range to account for your 50ms lat)
+            local lookAhead = (velocity.Magnitude > 1) and velocity.Unit * 7 or Vector3.new(0, -7, 0)
+            local cast = workspace:Raycast(ball.Position, lookAhead, rayParams)
 
             if cast and cast.Instance then
-                local isPlayer = cast.Instance:FindFirstAncestorOfClass("Model") and cast.Instance.Parent:FindFirstChild("Humanoid")
-                ball.CanCollide = isPlayer == nil -- Solid if NOT a player
+                local hitModel = cast.Instance:FindFirstAncestorOfClass("Model")
+                local isPlayer = hitModel and hitModel:FindFirstChild("Humanoid")
+                
+                if isPlayer then
+                    -- ONLY GHOST IF IT'S A PLAYER
+                    ball.CanCollide = false
+                else
+                    -- IT'S A WALL/GOAL/GROUND: STAY SOLID
+                    ball.CanCollide = true
+                end
             else
-                ball.CanCollide = false
+                -- IF NOTHING IS IN FRONT: STAY SOLID (This prevents wall phasing)
+                ball.CanCollide = true
             end
         end)
     end)
 end
 
--- 3. DESYNC SHIELD (With Notifications)
-local function activateDesync()
-    if getgenv().PrecisionSettings.ShieldActive then return end
-    
-    getgenv().PrecisionSettings.ShieldActive = true
-    Notify("🛡️ SHIELD ACTIVE", "Tackles are now being desynced!", 2)
-    
-    task.delay(2, function() 
-        getgenv().PrecisionSettings.ShieldActive = false 
-        Notify("⚠️ SHIELD EXPIRED", "You are vulnerable to tackles.", 1.5)
-    end)
-end
-
--- 4. THE MASTER HOOK
+-- 3. THE MASTER HOOK
 local oldNamecall
 oldNamecall = hookmetamethod(game, "__namecall", function(self, ...)
     local args = {...}
@@ -91,24 +90,18 @@ oldNamecall = hookmetamethod(game, "__namecall", function(self, ...)
     local name = self.Name
 
     if not checkcaller() then
-        -- DESYNC: Block incoming tackles/claims
         if (method == "FireServer" or method == "InvokeServer") and (name:find("Tackle") or name:find("ClaimBall")) then
-            if getgenv().PrecisionSettings.ShieldActive then 
-                return nil 
-            end
+            if getgenv().PrecisionSettings.ShieldActive then return nil end
         end
 
-        -- LASER SHOT: Modify shot power
         if (method == "FireServer" or method == "InvokeServer") and name:find("PerformAction") then
             local holdDuration = tick() - getgenv().PrecisionSettings.ChargeStart
-            
             if holdDuration >= 0.95 then
                 for i, arg in pairs(args) do
                     if typeof(arg) == "Vector3" and arg.Magnitude > 90 then
                         local t = getgenv().PrecisionSettings.Trajectory
                         args[i] = Vector3.new(arg.X * t.X, arg.Y * t.Y, arg.Z * t.Z)
                         triggerGhostBall()
-                        Notify("⚽ LASER SHOT", "Max power trajectory engaged!", 1.5)
                     end
                 end
             end
@@ -118,16 +111,15 @@ oldNamecall = hookmetamethod(game, "__namecall", function(self, ...)
     return oldNamecall(self, unpack(args))
 end)
 
--- 5. PHYSICS & TOUCH DETECTION
+-- 4. PHYSICS & AUTO-DESYNC
 local function applyPhysics(char)
-    local hum = char:WaitForChild("Humanoid")
     local root = char:WaitForChild("HumanoidRootPart")
-    hum:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
-    hum:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
+    char:WaitForChild("Humanoid"):SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
     
     root.Touched:Connect(function(hit)
         if hit.Parent:FindFirstChild("Humanoid") and hit.Parent.Name ~= lp.Name then
-            activateDesync()
+            getgenv().PrecisionSettings.ShieldActive = true
+            task.delay(2, function() getgenv().PrecisionSettings.ShieldActive = false end)
         end
     end)
 end
@@ -140,5 +132,3 @@ end)
 
 if lp.Character then applyPhysics(lp.Character) end
 lp.CharacterAdded:Connect(applyPhysics)
-
-print(":: PRECISION MIX [V5] :: Notifications & Wall-Proofing Live")
