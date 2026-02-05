@@ -1,4 +1,4 @@
--- [[ OMNI-UNIVERSAL: STABILIZED MIX ]]
+-- [[ OMNI-UNIVERSAL: STABILIZED & OPTIMIZED MIX ]]
 getgenv().OmniUniversal = {
     Enabled = true,
     TargetPart = "HumanoidRootPart",
@@ -12,22 +12,36 @@ getgenv().OmniUniversal = {
         AutoPrompt = true, 
         MagnetRange = 12 
     },
-    Combat = { SilentAim = true }
+    Combat = { SilentAim = true },
+    Boost = {
+        FPSBooster = true,
+        CullDistance = 500 -- Parts further than this are automatically "washed"
+    }
 }
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UIS = game:GetService("UserInputService")
+local Lighting = game:GetService("Lighting")
 local lp = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
 
 local CurrentTarget = nil
+local OriginalMaterials = {}
+
+-- [[ 0. GLOBAL RENDERING OVERRIDE ]]
+if getgenv().OmniUniversal.Boost.FPSBooster then
+    settings().Rendering.QualityLevel = 1
+    Lighting.GlobalShadows = false
+    Lighting.FogEnd = 9e9
+    workspace.Terrain.Decoration = false
+end
 
 -- [[ 1. OPTIMIZED TARGETING ]]
 task.spawn(function()
     while task.wait(0.2) do 
         if not getgenv().OmniUniversal.Enabled then continue end
-        local best, minAngle = nil, 250 -- Small FOV for performance
+        local best, minAngle = nil, 250
         local mousePos = UIS:GetMouseLocation()
         
         for _, plr in ipairs(Players:GetPlayers()) do
@@ -92,7 +106,35 @@ task.spawn(function()
     end
 end)
 
--- [[ 4. THE CLEAN HOOK ]]
+-- [[ 4. DYNAMIC FPS BOOSTER (CULLER) ]]
+task.spawn(function()
+    while task.wait(0.5) do
+        if not getgenv().OmniUniversal.Boost.FPSBooster then continue end
+        
+        for _, obj in ipairs(workspace:GetDescendants()) do
+            if obj:IsA("BasePart") and not obj.Parent:FindFirstChildOfClass("Humanoid") then
+                local _, onScreen = Camera:WorldToViewportPoint(obj.Position)
+                local dist = lp.Character and (obj.Position - lp.Character.HumanoidRootPart.Position).Magnitude or 0
+                
+                if not onScreen or dist > getgenv().OmniUniversal.Boost.CullDistance then
+                    if not OriginalMaterials[obj] then
+                        OriginalMaterials[obj] = {M = obj.Material, R = obj.Reflectance}
+                    end
+                    obj.Material = Enum.Material.SmoothPlastic
+                    obj.Reflectance = 0
+                else
+                    local data = OriginalMaterials[obj]
+                    if data then
+                        obj.Material = data.M
+                        obj.Reflectance = data.R
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- [[ 5. THE CLEAN HOOK ]]
 local mt = getrawmetatable(game)
 local oldNamecall = mt.__namecall
 setreadonly(mt, false)
@@ -104,15 +146,11 @@ mt.__namecall = newcclosure(function(self, ...)
     if getgenv().OmniUniversal.Enabled and not checkcaller() then
         if method == "FireServer" or method == "InvokeServer" then
             if CurrentTarget and getgenv().OmniUniversal.Combat.SilentAim then
-                local changed = false
                 for i, v in ipairs(args) do
                     if typeof(v) == "Vector3" then 
                         args[i] = CurrentTarget.Position 
-                        changed = true
+                        return oldNamecall(self, unpack(args))
                     end
-                end
-                if changed then
-                    return oldNamecall(self, unpack(args))
                 end
             end
         end
@@ -121,4 +159,4 @@ mt.__namecall = newcclosure(function(self, ...)
 end)
 
 setreadonly(mt, true)
-print("OMNI-MIXED: STABILIZED & FIXED")
+print("OMNI-MIXED: FPS BOOSTED & STABILIZED")
