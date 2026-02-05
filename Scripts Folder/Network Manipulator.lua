@@ -1,105 +1,196 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
-local lp = Players.LocalPlayer
-
--- [[ 1. THE OMNI-MIX CONFIG ]]
-getgenv().OmniMix = {
-    PriorityBias = 0.35,      
-    LeadDistance = 3.5,       
-    TargetPing = 10,          
-    Jitter = 2,               
-    Trajectory = Vector3.new(2.4, 0.9, 2.4),
-    TapSpam = 3               
+-- [[ OMNI-UNIVERSAL V2: THE ALL-EATER FRAMEWORK ]]
+getgenv().OmniUniversal = {
+    -- [CONFIGURATION]
+    Enabled = true,
+    TeamCheck = true,        -- Don't aim at teammates
+    TargetPart = "Head",     -- "Head" or "HumanoidRootPart"
+    
+    -- [MODULES]
+    Physics = {
+        SpeedMulti = 1.5,    -- Lower is safer for universal
+        AntiStun = true,
+        AntiRubberband = true -- Auto-disables speed if server forces you back
+    },
+    Interaction = {
+        AutoTouch = true,    -- For "Touch" items (Coins/Balls)
+        AutoPrompt = true,   -- For "Hold E" items (Doors/Loot)
+        PromptRange = 12     -- Range to press buttons
+    },
+    Combat = {
+        SilentAim = true,    -- Works for Projectile AND Hitscan
+        HitChance = 100,     -- Accuracy %
+    }
 }
 
--- [[ 2. PHYSICS & SPATIAL STICK ]]
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local lp = Players.LocalPlayer
+local mouse = lp:GetMouse()
+local Camera = workspace.CurrentCamera
+
+-- [[ 1. UNIVERSAL TARGET SELECTOR ]]
+local function GetBestTarget()
+    local bestTarget = nil
+    local minAngle = math.huge
+    
+    for _, plr in pairs(Players:GetPlayers()) do
+        if plr ~= lp and (not getgenv().OmniUniversal.TeamCheck or plr.Team ~= lp.Team) then
+            local char = plr.Character
+            if char and char:FindFirstChild(getgenv().OmniUniversal.TargetPart) then
+                -- Check if on screen
+                local pos, onScreen = Camera:WorldToViewportPoint(char[getgenv().OmniUniversal.TargetPart].Position)
+                if onScreen then
+                    -- Calculate FOV/Distance from Mouse
+                    local mouseDist = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(pos.X, pos.Y)).Magnitude
+                    if mouseDist < minAngle then
+                        minAngle = mouseDist
+                        bestTarget = char[getgenv().OmniUniversal.TargetPart]
+                    end
+                end
+            end
+        end
+    end
+    return bestTarget
+end
+
+-- [[ 2. INTERACTION ADAPTER (PROMPTS + TOUCH) ]]
+task.spawn(function()
+    while task.wait(0.2) do
+        if not getgenv().OmniUniversal.Enabled then continue end
+        local char = lp.Character
+        if not char then continue end
+        local root = char:FindFirstChild("HumanoidRootPart")
+        if not root then continue end
+
+        -- A. PROXIMITY PROMPT (The "Hold E" Support)
+        if getgenv().OmniUniversal.Interaction.AutoPrompt then
+            for _, prompt in pairs(workspace:GetDescendants()) do
+                if prompt:IsA("ProximityPrompt") and prompt.Enabled then
+                    if prompt.Parent and prompt.Parent:IsA("BasePart") then
+                        local dist = (root.Position - prompt.Parent.Position).Magnitude
+                        if dist <= getgenv().OmniUniversal.Interaction.PromptRange then
+                            fireproximityprompt(prompt) -- Instant trigger
+                        end
+                    end
+                end
+            end
+        end
+
+        -- B. TOUCH INTEREST (The "Ball/Item" Support)
+        if getgenv().OmniUniversal.Interaction.AutoTouch then
+            for _, v in pairs(workspace:GetChildren()) do
+                if v:IsA("BasePart") and not v.Anchored and v.CanCollide and v.Name ~= "Baseplate" then
+                    local dist = (root.Position - v.Position).Magnitude
+                    if dist <= 8 then -- Range for auto-pickup
+                        firetouchinterest(root, v, 0)
+                        firetouchinterest(root, v, 1)
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- [[ 3. PHYSICS ADAPTER (SERVER-SLIP) ]]
+local lastPos = Vector3.zero
 task.spawn(function()
     RunService.PreSimulation:Connect(function()
-        if not lp.Character then return end
-        local root = lp.Character:FindFirstChild("HumanoidRootPart")
-        local hum = lp.Character:FindFirstChild("Humanoid")
-        
-        if root and hum then
-            -- [A] THE JUMP LOCK
-            -- If we are jumping or falling, we disable the Lead Force to prevent 'Flying'
-            local state = hum:GetState()
-            local isJumping = (state == Enum.HumanoidStateType.Jumping or state == Enum.HumanoidStateType.Freefall)
+        if not getgenv().OmniUniversal.Enabled then return end
+        local char = lp.Character
+        if not char then return end
+        local root = char:FindFirstChild("HumanoidRootPart")
+        local hum = char:FindFirstChildOfClass("Humanoid")
 
-            local vel = root.AssemblyLinearVelocity
-            if vel.Magnitude > 2 and not isJumping then
-                -- Only apply Lead Force when grounded and moving
-                local horizontalVel = Vector3.new(vel.X, 0, vel.Z)
-                local leadForce = horizontalVel.Unit * getgenv().OmniMix.LeadDistance
-                root.AssemblyLinearVelocity = vel + leadForce
+        if root and hum then
+            -- Anti-Stun
+            if getgenv().OmniUniversal.Physics.AntiStun then
+                local state = hum:GetState()
+                if state == Enum.HumanoidStateType.FallingDown or state == Enum.HumanoidStateType.Ragdoll then
+                    hum:ChangeState(Enum.HumanoidStateType.Running)
+                end
             end
 
-            -- [B] PHYSICS FLUSH (The Stick)
-            -- Keeps you synced to server without adding upward force
-            root.CFrame = root.CFrame
-            
-            -- [C] ZERO BUFFER
-            settings().Network.IncomingReplicationLag = 0
+            -- Rubberband Detection
+            if getgenv().OmniUniversal.Physics.AntiRubberband then
+                if (root.Position - lastPos).Magnitude > 20 then
+                    -- If we moved too fast (teleported back), skip this frame's boost
+                    lastPos = root.Position
+                    return 
+                end
+                lastPos = root.Position
+            end
+
+            -- Universal Speed
+            if hum.MoveDirection.Magnitude > 0 then
+                -- We add velocity but keep it "Grounded" to avoid flying checks
+                local flatVel = Vector3.new(root.AssemblyLinearVelocity.X, 0, root.AssemblyLinearVelocity.Z)
+                local addedVel = hum.MoveDirection * getgenv().OmniUniversal.Physics.SpeedMulti
+                
+                root.AssemblyLinearVelocity = Vector3.new(flatVel.X + addedVel.X, root.AssemblyLinearVelocity.Y, flatVel.Z + addedVel.Z)
+            end
         end
     end)
 end)
 
--- [[ 3. DYNAMIC REMOTE LOCATOR ]]
-local function GetKnitRemote(service, name, type)
-    local index = ReplicatedStorage:FindFirstChild("Packages") and ReplicatedStorage.Packages:FindFirstChild("_Index")
-    if not index then return nil end
-    local success, result = pcall(function()
-        local s = index:FindFirstChild("sleitnick_knit@1.7.0", true).Parent.knit.Services[service]
-        return type == "RF" and s.RF[name] or s.RE[name]
-    end)
-    return success and result
-end
+-- [[ 4. THE OMNI-HOOK (PROJECTILE & HITSCAN) ]]
+local mt = getrawmetatable(game)
+local oldNamecall = mt.__namecall
+local oldIndex = mt.__index
+setreadonly(mt, false)
 
-local ActionRE = GetKnitRemote("ActionService", "PerformAction", "RE")
-local AntiCheatRF = GetKnitRemote("AntiCheatService", "FireClientTouch", "RF")
-
--- [[ 4. THE MASTER OMNI-HOOK ]]
-local oldNamecall
-oldNamecall = hookmetamethod(game, "__namecall", function(self, ...)
+-- A. RAYCAST HOOK (Support for Shooters like Arsenal)
+mt.__namecall = newcclosure(function(self, ...)
     local args = {...}
     local method = getnamecallmethod()
-    local name = self.Name
-
-    -- [A] PUBLIC PING SPOOF w/ JITTER
-    if (method == "InvokeServer" or method == "FireServer") and (name:find("Ping") or name:find("Latency")) then
-        local jitter = math.random(-getgenv().OmniMix.Jitter, getgenv().OmniMix.Jitter)
-        return (getgenv().OmniMix.TargetPing + jitter) / 1000
-    end
-
-    -- [B] PACKET PRIORITY (Register First)
-    if self == ActionRE and not checkcaller() then
-        for i, v in pairs(args) do
-            if type(v) == "number" and v > 1000000 then
-                args[i] = tick() - getgenv().OmniMix.PriorityBias
+    
+    if getgenv().OmniUniversal.Enabled and getgenv().OmniUniversal.Combat.SilentAim and not checkcaller() then
+        
+        -- 1. DETECT RAYCAST (Hitscan Weapons)
+        if method == "Raycast" and self == workspace then
+            -- args[1] = Origin, args[2] = Direction
+            local target = GetBestTarget()
+            if target then
+                -- Redirect the ray towards the enemy head
+                args[2] = (target.Position - args[1]).Unit * 1000
+                return oldNamecall(self, unpack(args))
             end
         end
 
-        local action = args[1]
-        if action == "ActionPrimary" and typeof(args[3]) == "Vector3" then
-            local t = getgenv().OmniMix.Trajectory
-            args[3] = Vector3.new(args[3].X * t.X, args[3].Y * t.Y, args[3].Z * t.Z)
-        elseif action == "Tackle" or action == "Dribble" then
-            task.spawn(function()
-                for i = 1, getgenv().OmniMix.TapSpam do
-                    ActionRE:FireServer(unpack(args))
-                    task.wait()
+        -- 2. DETECT FIND PART ON RAY (Legacy Shooters)
+        if method:find("FindPartOnRay") then
+            local target = GetBestTarget()
+            if target then
+                -- Create a new Ray pointing at the enemy
+                local origin = args[1].Origin
+                args[1] = Ray.new(origin, (target.Position - origin).Unit * 1000)
+                return oldNamecall(self, unpack(args))
+            end
+        end
+
+        -- 3. DETECT MOUSE HIT (Da Hood / Projectile)
+        if method == "FireServer" then
+             for i, arg in pairs(args) do
+                if typeof(arg) == "Vector3" then
+                     -- Check if this vector looks like a direction (Unit vector-ish) or a Mouse Position
+                     local target = GetBestTarget()
+                     if target then
+                         -- Calculate direction to target
+                         local origin = lp.Character.Head.Position
+                         args[i] = (target.Position - origin).Unit -- Update Direction
+                         -- OR Update Position if the game uses Position
+                         if (arg - lp.Character.HumanoidRootPart.Position).Magnitude > 5 then
+                             args[i] = target.Position
+                         end
+                     end
                 end
-            end)
+             end
         end
     end
-
-    -- [C] ANTI-CHEAT HANDSHAKE
-    if self == AntiCheatRF and method == "InvokeServer" then
-        return oldNamecall(self, unpack(args))
-    end
-
+    
     return oldNamecall(self, unpack(args))
 end)
 
-print("V21.2: OMNIPOTENCE MIX LOADED - PHYSICS STABILIZED")
+setreadonly(mt, true)
 
+print("OMNI-UNIVERSAL V2: HITSCAN, INTERACTION & PHYSICS LOADED")
