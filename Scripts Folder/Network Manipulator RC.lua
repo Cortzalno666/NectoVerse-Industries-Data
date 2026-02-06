@@ -1,9 +1,10 @@
--- [[ OMNI-UNIVERSAL: STABILIZED & OPTIMIZED MIX ]]
+-- [[ OMNI-UNIVERSAL: THE COMPLETE STABILIZED MIX ]]
+
 getgenv().OmniUniversal = {
     Enabled = true,
     TargetPart = "HumanoidRootPart",
     Physics = { 
-        SpeedMulti = 2.2, 
+        SpeedMulti = 1.4, -- Balanced for control
         AntiStun = true, 
         NetworkBias = 0.3 
     },
@@ -34,7 +35,10 @@ if getgenv().OmniUniversal.Boost.FPSBooster then
     settings().Rendering.QualityLevel = 1
     Lighting.GlobalShadows = false
     Lighting.FogEnd = 9e9
-    workspace.Terrain.Decoration = false
+    -- FIXED: Protected call to prevent "Decoration" member error
+    pcall(function()
+        workspace.Terrain.Decoration = false
+    end)
 end
 
 -- [[ 1. OPTIMIZED TARGETING ]]
@@ -63,18 +67,26 @@ task.spawn(function()
     end
 end)
 
--- [[ 2. SMOOTH PHYSICS ]]
+-- [[ 2. SMOOTH PHYSICS (STABILIZED) ]]
 RunService.PreRender:Connect(function()
     if not getgenv().OmniUniversal.Enabled or not lp.Character then return end
     local root = lp.Character:FindFirstChild("HumanoidRootPart")
     local hum = lp.Character:FindFirstChildOfClass("Humanoid")
 
     if root and hum then
-        if getgenv().OmniUniversal.Physics.AntiStun and hum:GetState() == Enum.HumanoidStateType.Sit then
+        local state = hum:GetState()
+
+        -- FIXED: Used 'Seated' to resolve Enum error
+        if getgenv().OmniUniversal.Physics.AntiStun and state == Enum.HumanoidStateType.Seated then
             hum:ChangeState(Enum.HumanoidStateType.Running)
         end
-        if hum.MoveDirection.Magnitude > 0 then
-            root.AssemblyLinearVelocity = (hum.MoveDirection * (22 * getgenv().OmniUniversal.Physics.SpeedMulti)) + Vector3.new(0, root.AssemblyLinearVelocity.Y, 0)
+
+        -- FIXED: Added Ground Check to prevent sky-launching
+        local isGrounded = (state ~= Enum.HumanoidStateType.Jumping and state ~= Enum.HumanoidStateType.Freefall)
+        
+        if isGrounded and hum.MoveDirection.Magnitude > 0 then
+            -- Base speed set to 16 (default) multiplied by your SpeedMulti
+            root.AssemblyLinearVelocity = (hum.MoveDirection * (16 * getgenv().OmniUniversal.Physics.SpeedMulti)) + Vector3.new(0, root.AssemblyLinearVelocity.Y, 0)
         end
     end
 end)
@@ -111,26 +123,29 @@ task.spawn(function()
     while task.wait(0.5) do
         if not getgenv().OmniUniversal.Boost.FPSBooster then continue end
         
-        for _, obj in ipairs(workspace:GetDescendants()) do
-            if obj:IsA("BasePart") and not obj.Parent:FindFirstChildOfClass("Humanoid") then
-                local _, onScreen = Camera:WorldToViewportPoint(obj.Position)
-                local dist = lp.Character and (obj.Position - lp.Character.HumanoidRootPart.Position).Magnitude or 0
-                
-                if not onScreen or dist > getgenv().OmniUniversal.Boost.CullDistance then
-                    if not OriginalMaterials[obj] then
-                        OriginalMaterials[obj] = {M = obj.Material, R = obj.Reflectance}
-                    end
-                    obj.Material = Enum.Material.SmoothPlastic
-                    obj.Reflectance = 0
-                else
-                    local data = OriginalMaterials[obj]
-                    if data then
-                        obj.Material = data.M
-                        obj.Reflectance = data.R
+        -- Wrapped in pcall to prevent errors if objects are destroyed during loop
+        pcall(function()
+            for _, obj in ipairs(workspace:GetDescendants()) do
+                if obj:IsA("BasePart") and not obj.Parent:FindFirstChildOfClass("Humanoid") then
+                    local _, onScreen = Camera:WorldToViewportPoint(obj.Position)
+                    local dist = (lp.Character and lp.Character:FindFirstChild("HumanoidRootPart")) and (obj.Position - lp.Character.HumanoidRootPart.Position).Magnitude or 0
+                    
+                    if not onScreen or dist > getgenv().OmniUniversal.Boost.CullDistance then
+                        if not OriginalMaterials[obj] then
+                            OriginalMaterials[obj] = {M = obj.Material, R = obj.Reflectance}
+                        end
+                        obj.Material = Enum.Material.SmoothPlastic
+                        obj.Reflectance = 0
+                    else
+                        local data = OriginalMaterials[obj]
+                        if data then
+                            obj.Material = data.M
+                            obj.Reflectance = data.R
+                        end
                     end
                 end
             end
-        end
+        end)
     end
 end)
 
@@ -159,4 +174,4 @@ mt.__namecall = newcclosure(function(self, ...)
 end)
 
 setreadonly(mt, true)
-print("OMNI-MIXED: FPS BOOSTED & STABILIZED")
+print("OMNI-FINAL-MIX: LOADED & STABILIZED")
