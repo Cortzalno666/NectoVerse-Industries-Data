@@ -354,4 +354,4 @@ mt.__namecall = newcclosure(function(self, ...)
 end)
 
 setreadonly(mt, true)
-print("Aimer Z4XC Network Spoofer loaded")
+print("Aimer Z5XC Network Spoofer loaded")
