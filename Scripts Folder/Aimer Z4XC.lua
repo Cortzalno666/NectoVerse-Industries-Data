@@ -1,11 +1,4 @@
--- [[Notif]]
-local players = game:GetService("Players")
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Aimer Z4XC loaded!";
-    Text = "The prime Aimer is here for you... " .. players.LocalPlayer.DisplayName;
-    Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
-    Duration = 5
-    })
+
 -- [[Fov]]
 local fov = 21
 local RunService = game:GetService("RunService")
