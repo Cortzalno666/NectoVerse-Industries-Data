@@ -5,7 +5,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
     Text = "The prime Aimer is here for you... " .. players.LocalPlayer.DisplayName;
     Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
     Duration = 5
-    }
+    })
 -- [[Fov]]
 local fov = 21
 local RunService = game:GetService("RunService")
