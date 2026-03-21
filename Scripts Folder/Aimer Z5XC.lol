@@ -1,7 +1,7 @@
 local players = game:GetService("Players")
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Aimer Z4XC loaded!";
-    Text = "Loaded your personal aim assistant! " .. players.LocalPlayer.DisplayName;
+    Title = "Aimer Z5XC loaded!";
+    Text = "Loaded your personal aim and network assistant! " .. players.LocalPlayer.DisplayName;
     Icon = "rbxthumb://type=AvatarHeadShot&id=" .. players.LocalPlayer.UserId .. "&w=180&h=180 true";
     Duration = 5
 })
