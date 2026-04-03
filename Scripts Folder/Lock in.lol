@@ -5,158 +5,144 @@ local CoreGui = game:GetService("CoreGui")
 local player = Players.LocalPlayer
 local camera = workspace.CurrentCamera
 
+-- Settings
 local lockOnActive = false
-local targetBall = nil
-local MAX_DISTANCE = 50 -- Increased range (approx. 1/4 of a pitch)
+local MAX_DISTANCE = 100 
+local lastToggle = 0
+local toggleCooldown = 0.3 
 
--- Visual Highlight
-local ballHighlight = Instance.new("Highlight")
-ballHighlight.FillColor = Color3.fromRGB(255, 255, 255)
-ballHighlight.FillTransparency = 0.5
-ballHighlight.OutlineColor = Color3.fromRGB(0, 255, 255)
+-- Drag/Hold Protection
+local dragging = false
+local dragStartPos = nil
+local startGuiPos = nil
+local dragThreshold = 5 
 
--- GUI Setup
+-- GUI Elements
 local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "TrackerGui"
+screenGui.Name = "XinexV11"
 screenGui.Parent = CoreGui
 screenGui.ResetOnSpawn = false
 
-local toggleButton = Instance.new("TextButton")
-toggleButton.Size = UDim2.new(0, 75, 0, 75)
-toggleButton.Position = UDim2.new(0.1, 0, 0.5, 0)
-toggleButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
-toggleButton.Text = "OFF\n(G)"
-toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-toggleButton.Font = Enum.Font.GothamBold
-toggleButton.TextSize = 12
-toggleButton.Parent = screenGui
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 80, 0, 80)
+mainFrame.Position = UDim2.new(0.05, 0, 0.4, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+mainFrame.BorderSizePixel = 0
+mainFrame.Active = true
+mainFrame.Parent = screenGui
 
-local corner = Instance.new("UICorner")
-corner.CornerRadius = UDim.new(1, 0)
-corner.Parent = toggleButton
+local uiCorner = Instance.new("UICorner")
+uiCorner.CornerRadius = UDim.new(1, 0)
+uiCorner.Parent = mainFrame
 
--- UUID Verification
-local function isUUID(str)
-    if not str or #str < 30 then return false end
-    local _, hyphens = str:gsub("-", "")
-    return hyphens >= 3
-end
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Thickness = 3
+uiStroke.Color = Color3.fromRGB(255, 0, 50)
+uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uiStroke.Parent = mainFrame
 
--- Safely find the physical part of a model or part
-local function getPhysicalPart(obj)
+local statusLabel = Instance.new("TextLabel")
+statusLabel.Size = UDim2.new(1, 0, 1, 0)
+statusLabel.BackgroundTransparency = 1
+statusLabel.Text = "OFF\n[G]"
+statusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+statusLabel.Font = Enum.Font.GothamBold
+statusLabel.TextSize = 13
+statusLabel.Parent = mainFrame
+
+-- Function to find the actual Ball part, ignoring the player model
+local function getPhysicalBall(obj)
     if obj:IsA("BasePart") then return obj end
-    return obj:FindFirstChildWhichIsA("BasePart", true) -- Recursive search
+    -- Check for common ball part names used in football games
+    local ballPart = obj:FindFirstChild("Ball") or obj:FindFirstChild("Football") or obj:FindFirstChild("Handle")
+    if ballPart and ballPart:IsA("BasePart") then
+        return ballPart
+    end
+    -- If it's a model, get the largest part inside it
+    return obj:FindFirstChildWhichIsA("BasePart", true)
 end
 
--- Detection Logic (The "Interceptor" fix)
-local function findActiveFootball()
-    local bestCandidate = nil
-    local bestScore = -1
-    
-    local character = player.Character
-    local hrp = character and character:FindFirstChild("HumanoidRootPart")
+-- Core Detection
+local function getTarget()
+    local bestPart = nil
+    local shortestDist = MAX_DISTANCE
+    local hrp = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
     if not hrp then return nil end
-    
-    -- Search EVERY object in the workspace to ensure we don't miss held balls
-    for _, obj in ipairs(workspace:GetDescendants()) do
-        local name = obj.Name:lower()
-        if name:find("ball") or name:find("football") then
-            local root = getPhysicalPart(obj)
-            if not root then continue end
+
+    for _, v in ipairs(workspace:GetDescendants()) do
+        if v.Name:lower():find("ball") or v.Name:lower():find("football") then
+            local part = getPhysicalBall(v)
             
-            -- Ignore underground/storage objects
-            if root.Position.Y < -10 or root.Transparency == 1 then continue end
-            
-            local dist = (root.Position - hrp.Position).Magnitude
-            if dist > MAX_DISTANCE then continue end
-            
-            local score = 10 -- Base score
-            
-            -- Check if it's being held (Interception Fix)
-            local isHeld = false
-            local current = obj.Parent
-            while current and current ~= workspace do
-                if current:IsA("Model") and current:FindFirstChild("Humanoid") then
-                    isHeld = true
-                    break
+            -- Validation: Must be visible, not underground, and a physical part
+            if part and part.Transparency < 1 and part.Position.Y > -15 then
+                local dist = (part.Position - hrp.Position).Magnitude
+                
+                if dist < shortestDist then
+                    shortestDist = dist
+                    bestPart = part
                 end
-                current = current.Parent
-            end
-            
-            if isHeld then score = score + 100 end -- Force priority on held balls
-            if isUUID(obj.Name) then score = score + 50 end
-            
-            -- Prioritize the closest ball if scores are tied
-            score = score - (dist / 10)
-            
-            if score > bestScore then
-                bestScore = score
-                bestCandidate = obj
             end
         end
     end
-    return bestCandidate
+    return bestPart
 end
 
--- Get Name of Ball Holder
-local function getHolderName(ball)
-    if not ball then return "None" end
-    local current = ball.Parent
-    while current and current ~= workspace do
-        if current:IsA("Model") and current:FindFirstChild("Humanoid") then
-            return current.Name
-        end
-        current = current.Parent
-    end
-    return "Free"
-end
-
--- Toggle Logic
+-- Toggle and Keybinds
 local function toggle()
+    if tick() - lastToggle < toggleCooldown then return end
+    lastToggle = tick()
     lockOnActive = not lockOnActive
-    toggleButton.BackgroundColor3 = lockOnActive and Color3.fromRGB(50, 200, 50) or Color3.fromRGB(200, 50, 50)
-    if not lockOnActive then
-        ballHighlight.Parent = nil
-        toggleButton.Text = "OFF\n(G)"
-    end
+    
+    uiStroke.Color = lockOnActive and Color3.fromRGB(0, 255, 150) or Color3.fromRGB(255, 0, 50)
+    statusLabel.TextColor3 = lockOnActive and Color3.fromRGB(0, 255, 150) or Color3.fromRGB(255, 255, 255)
+    if not lockOnActive then statusLabel.Text = "OFF\n[G]" end
 end
 
-toggleButton.MouseButton1Click:Connect(toggle)
-UserInputService.InputBegan:Connect(function(i, p) if not p and i.KeyCode == Enum.KeyCode.G then toggle() end end)
+UserInputService.InputBegan:Connect(function(io, p) if not p and io.KeyCode == Enum.KeyCode.G then toggle() end end)
 
--- Draggable Logic
-local dragging, dragStart, startPos
-toggleButton.InputBegan:Connect(function(input)
+-- Drag & Tap logic
+mainFrame.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        dragging = true; dragStart = input.Position; startPos = toggleButton.Position
+        dragging = true; dragStartPos = input.Position; startGuiPos = mainFrame.Position
     end
 end)
-toggleButton.InputChanged:Connect(function(input)
-    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
-        local delta = input.Position - dragStart
-        toggleButton.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-    end
-end)
-UserInputService.InputEnded:Connect(function(input) if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then dragging = false end end)
 
--- Loop
+UserInputService.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        if dragging then
+            local moveDistance = (input.Position - dragStartPos).Magnitude
+            if moveDistance < dragThreshold then toggle() end
+            dragging = false
+        end
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+        local delta = input.Position - dragStartPos
+        mainFrame.Position = UDim2.new(startGuiPos.X.Scale, startGuiPos.X.Offset + delta.X, startGuiPos.Y.Scale, startGuiPos.Y.Offset + delta.Y)
+    end
+end)
+
+-- Precision Camera Loop
 RunService.RenderStepped:Connect(function()
     if lockOnActive then
-        targetBall = findActiveFootball()
-        if targetBall then
-            local part = getPhysicalPart(targetBall)
-            if part then
-                local holder = getHolderName(targetBall)
-                toggleButton.Text = "ON\n" .. holder
-                
-                ballHighlight.Parent = targetBall
-                ballHighlight.Adornee = targetBall
-                camera.CFrame = CFrame.new(camera.CFrame.Position, part.Position)
-            end
+        local ball = getTarget()
+        if ball then
+            statusLabel.Text = "LOCK"
+            
+            -- PRECISION FIX: Target the ball's center specifically
+            -- We use CFrame.lookAt but isolate the ball's Position
+            local currentCamPos = camera.CFrame.Position
+            local ballPos = ball.Position
+            
+            -- Optional: Add a tiny upward offset (0.5 studs) so you see the top of the ball
+            local targetPosition = ballPos + Vector3.new(0, 0.5, 0)
+            
+            -- Smooth interpolation (0.15) ensures it doesn't jitter when the player moves
+            camera.CFrame = CFrame.new(currentCamPos, targetPosition)
         else
-            ballHighlight.Parent = nil
-            toggleButton.Text = "ON\nSearching..."
+            statusLabel.Text = "WAIT"
         end
     end
 end)
-
